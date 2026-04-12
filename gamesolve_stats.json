@@ -1,0 +1,99 @@
+{
+  "total_samples": 2400,
+  "total_skipped": 45,
+  "task_breakdown": {
+    "nash_equilibrium": 1350,
+    "best_response": 1050
+  },
+  "by_config": {
+    "nash_2x2_general": {
+      "target": 400,
+      "generated": 400,
+      "skipped": 0
+    },
+    "nash_2x2_zero_sum": {
+      "target": 150,
+      "generated": 150,
+      "skipped": 0
+    },
+    "nash_2x2_symmetric": {
+      "target": 100,
+      "generated": 100,
+      "skipped": 0
+    },
+    "nash_3x3_general": {
+      "target": 200,
+      "generated": 200,
+      "skipped": 7
+    },
+    "nash_3x3_zero_sum": {
+      "target": 100,
+      "generated": 100,
+      "skipped": 29
+    },
+    "nash_3x3_symmetric": {
+      "target": 80,
+      "generated": 80,
+      "skipped": 0
+    },
+    "nash_4x4_general": {
+      "target": 100,
+      "generated": 100,
+      "skipped": 6
+    },
+    "nash_2x3_general": {
+      "target": 120,
+      "generated": 120,
+      "skipped": 2
+    },
+    "nash_3x2_general": {
+      "target": 100,
+      "generated": 100,
+      "skipped": 1
+    },
+    "br_2x2_general": {
+      "target": 300,
+      "generated": 300,
+      "skipped": 0
+    },
+    "br_2x2_zero_sum": {
+      "target": 100,
+      "generated": 100,
+      "skipped": 0
+    },
+    "br_3x3_general": {
+      "target": 200,
+      "generated": 200,
+      "skipped": 0
+    },
+    "br_3x3_zero_sum": {
+      "target": 80,
+      "generated": 80,
+      "skipped": 0
+    },
+    "br_4x4_general": {
+      "target": 150,
+      "generated": 150,
+      "skipped": 0
+    },
+    "br_2x3_general": {
+      "target": 120,
+      "generated": 120,
+      "skipped": 0
+    },
+    "br_3x2_general": {
+      "target": 100,
+      "generated": 100,
+      "skipped": 0
+    }
+  },
+  "equilibrium_class_dist": {
+    "both": 202,
+    "mixed": 170,
+    "pure": 978
+  },
+  "br_uniqueness": {
+    "unique": 1041,
+    "non_unique": 9
+  }
+}
