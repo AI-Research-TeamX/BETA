@@ -133,3 +133,6 @@ outputs
 
 setup.sh
 *.zip
+
+*.jsonl
+*.json
