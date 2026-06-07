@@ -136,3 +136,5 @@ setup.sh
 
 *.jsonl
 *.json
+
+Qwen/*
