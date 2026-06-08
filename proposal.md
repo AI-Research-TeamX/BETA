@@ -51,14 +51,24 @@ We extract hidden states from all transformer layers for each game-solving insta
 
 **Input construction:** For each sample $x_i$ (a game description + payoff matrix), we pass it through the frozen LLM and collect the hidden state at each layer $l \in \{1, \ldots, L\}$:
 
-$$h_i^{(l)} = \text{LLM}^{(l)}(x_i) \in \mathbb{R}^d$$
+$$H_i^{(l)} = \text{LLM}^{(l)}(x_i) \in \mathbb{R}^{T \times d}$$
 
-We use the hidden state at the **last token position** of the input (before generation begins), as this aggregates the full context. We additionally experiment with **mean pooling** over all input tokens.
+We extract **six pooling variants** in a single forward pass, computing all on GPU before transfer to CPU:
+
+| Pooling | Formula | Motivation |
+|---|---|---|
+| **last** | $h_{T_{\text{eff}}}^{(l)}$ | Standard decoder aggregation |
+| **first** | $h_1^{(l)}$ | BOS token (control baseline) |
+| **mean** | $\frac{1}{T_{\text{eff}}} \sum_{j=1}^{T_{\text{eff}}} h_j^{(l)}$ | Uniform average over all tokens |
+| **sum** | $\sum_{j=1}^{T_{\text{eff}}} h_j^{(l)}$ | Magnitude-preserving aggregation |
+| **max** | $\max_j h_j^{(l)}$ (element-wise) | Peak activation per dimension |
+| **weighted** | $\sum_j w_j h_j^{(l)}$, $w_j \propto e^{2j/T_{\text{eff}}}$ | Exponentially favors later positions |
 
 **Models:** We run probing experiments on:
-- `Qwen2.5-7B`, `Qwen2.5-72B`
-- `LLaMA-3.1-8B`, `LLaMA-3.1-70B`
-- `DeepSeek-R1-Distill-Qwen-7B` (reasoning-tuned baseline)
+- `Qwen2.5-1.5B-Instruct`, `Qwen2.5-3B-Instruct` (completed)
+- `Qwen2.5-7B-Instruct`, `Qwen2.5-72B` (planned)
+- `LLaMA-3.1-8B`, `LLaMA-3.1-70B` (planned)
+- `DeepSeek-R1-Distill-Qwen-7B` (reasoning-tuned baseline, planned)
 
 ### 3.3 Probing Labels
 
@@ -113,84 +123,158 @@ The Phase 1 analysis will produce:
 
 ---
 
-## 4. Phase 2: Auxiliary Probing-Loss Fine-Tuning
+## 4. Phase 1 Key Findings (Empirical Basis for Phase 2)
 
-### 4.1 Overview
+The following findings from our probing experiments on Qwen2.5-{1.5B, 3B}-Instruct directly inform the Phase 2 design:
 
-Using the diagnostic outputs from Phase 1, we perform **lightweight fine-tuning** that jointly optimizes:
+### 4.1 Pooling Method Selection
+
+| Pooling | Wins (1.5B) | Wins (3B) | Interpretation |
+|---|---|---|---|
+| **weighted** | 2/6 | 4/6 | Exponential position-weighting captures both structural and reasoning tokens |
+| **mean** | 2/6 | 1/6 | Strong all-rounder; averages full-sequence information |
+| **sum** | 2/6 | 1/6 | Excels on game_type and br_direction; magnitude-sensitive |
+| last | 0/6 | 0/6 | Standard decoder token; leaves substantial signal on the table |
+| first | 0/6 | 0/6 | BOS token carries zero task-relevant information |
+
+**Conclusion:** Weighted pooling is the optimal default representation for auxiliary heads. Mean pooling is a strong alternative with simpler computation.
+
+### 4.2 Critical Layer Positions
+
+Peak probing accuracy occurs at **model-relative depth** $\alpha = l / (L-1)$:
+
+| Concept | 1.5B α (best) | 3B α (best) | Cross-model pattern |
+|---|---|---|---|
+| eq_type | 0.63 | 0.63 | Upper-middle layers |
+| game_type | 0.56 | 0.54 | Middle layers |
+| difficulty | 1.00 | 0.46 | Model-dependent |
+| dominance | 0.67 | 0.77 | Upper-middle to late |
+| br_direction | 0.70 | 0.74 | Late layers |
+| eq_uniqueness | 0.44 | 0.17 | Early-to-middle |
+
+**Multi-concept coverage analysis** (layers where ≥5/6 concepts are within 95% of their peak):
+- 1.5B: layers 8, 11, 13 → α ∈ {0.30, 0.41, 0.48}
+- 3B: layers 7, 13, 21 → α ∈ {0.20, 0.37, 0.60}
+
+**Conclusion:** Three injection points at $\alpha \in \{1/4, 1/2, 2/3\}$ cover most concept peaks across model scales.
+
+### 4.3 Concept Difficulty Ranking (Phase 1 Peak Accuracy)
+
+| Concept | Best Acc (avg) | Relative Difficulty |
+|---|---|---|
+| game_type | 0.996 | Trivial (near-ceiling) |
+| difficulty | 0.903 | Easy |
+| dominance | 0.816 | Medium |
+| eq_uniqueness | 0.731 | Hard |
+| eq_type | 0.748 | Hard |
+| br_direction | 0.638 | Very Hard |
+
+**Conclusion:** br_direction, eq_type, and eq_uniqueness are the underrepresented concepts that benefit most from auxiliary supervision. game_type is near-ceiling and provides negligible learning signal.
+
+---
+
+## 5. Phase 2: Auxiliary Probing-Loss Fine-Tuning
+
+### 5.1 Overview
+
+Using the empirical findings from Phase 1 (§4), we perform **lightweight fine-tuning** that jointly optimizes:
 1. The standard next-token generation loss (to preserve general LLM capability)
-2. Auxiliary classification losses at the **critical layers** identified in Phase 1, using lightweight probing heads
+2. Auxiliary classification losses at **empirically-determined critical layers**, using probing heads that operate on **weighted-pooled** hidden states
 
-This is a **parameter-efficient** approach: the probing heads are small (linear layers, ~$d \times C$ parameters), and we optionally apply LoRA to the backbone.
+This is a **parameter-efficient** approach: the probing heads are small (linear layers, ~$d \times C$ parameters), and we apply LoRA to the backbone.
 
-### 4.2 Model Architecture
+### 5.2 Model Architecture
 
 ```
 Input: game description + payoff matrix (tokenized)
          │
-   [Frozen or LoRA-adapted Transformer Backbone]
+   [LoRA-adapted Transformer Backbone]
          │
-   Layer 1 hidden states → [Probing Head 1] → concept loss₁
-   Layer 2 hidden states → [Probing Head 2] → concept loss₂
-         ⋮
-   Layer L* hidden states → [Probing Head L*] → concept loss_{L*}
+   Layer ⌊L/4⌋  → WeightedPool → [Probing Head₁] → aux_loss₁  (early-mid)
+   Layer ⌊L/2⌋  → WeightedPool → [Probing Head₂] → aux_loss₂  (middle)
+   Layer ⌊2L/3⌋ → WeightedPool → [Probing Head₃] → aux_loss₃  (upper-mid)
          │
    [LM Head]
          │
    Output: generated reasoning + answer → generation loss
 ```
 
-**Probing heads:** One linear head per (critical layer, concept label) pair selected from Phase 1. Each head is:
+**Layer selection rule:** For a model with $L$ layers, inject probing heads at layers:
 
-$$\hat{y}^{(l,t)} = \text{softmax}(W^{(l,t)} \cdot \text{sg}(h^{(l)}) + b^{(l,t)})$$
+$$\mathcal{L}^* = \left\{\lfloor \tfrac{L}{4} \rfloor,\ \lfloor \tfrac{L}{2} \rfloor,\ \lfloor \tfrac{2L}{3} \rfloor\right\}$$
 
-where $\text{sg}(\cdot)$ denotes stop-gradient **on the forward pass to the head** only; gradients do **flow back** through $h^{(l)}$ into the backbone (this is what makes it "auxiliary loss" rather than frozen probing).
+This corresponds to $\alpha \in \{0.25, 0.5, 0.67\}$, empirically validated as the positions with maximal multi-concept coverage across both model scales (§4.2).
 
-### 4.3 Training Objective
+**Pooling for probing heads:** Each probing head operates on the **weighted-average pooled** representation:
+
+$$\bar{h}^{(l)} = \sum_{j=1}^{T} w_j \cdot h_j^{(l)}, \quad w_j = \frac{\exp(2 \cdot j / T_{\text{eff}})}{\sum_k \exp(2 \cdot k / T_{\text{eff}})} \cdot m_j$$
+
+where $m_j$ is the attention mask and $T_{\text{eff}}$ is the effective sequence length. This exponentially weights later positions, capturing both structural context (early tokens) and reasoning state (later tokens). Phase 1 showed this outperforms last-token pooling by 5–10% absolute on most concepts.
+
+**Probing heads:** One linear head per (injection layer, concept label) pair:
+
+$$\hat{y}^{(l,t)} = \text{softmax}(W^{(l,t)} \cdot \bar{h}^{(l)} + b^{(l,t)})$$
+
+Gradients flow back through $\bar{h}^{(l)}$ into the backbone—this is what distinguishes auxiliary-loss training from frozen probing.
+
+### 5.3 Training Objective
 
 The total loss for a training instance $(x_i, y_i^{\text{gen}}, \{y_i^{(t)}\}_t)$ is:
 
 $$\mathcal{L} = \underbrace{\mathcal{L}_{\text{gen}}(x_i, y_i^{\text{gen}})}_{\text{generation loss}} + \lambda \sum_{l \in \mathcal{L}^*} \sum_{t \in \mathcal{T}} w_t \cdot \underbrace{\mathcal{L}_{\text{CE}}(\hat{y}_i^{(l,t)}, y_i^{(t)})}_{\text{probing auxiliary loss}}$$
 
 **Parameters:**
-- $\lambda$: global auxiliary loss weight (tuned on val set, typical range $[0.01, 0.5]$)
-- $w_t$: per-concept weight, set inversely proportional to Phase 1 peak probing accuracy (up-weight harder-to-learn concepts)
-- $\mathcal{T}$: set of concept labels used as supervision (we ablate using all 6 vs. only the 3 coarse-grained)
-- $\mathcal{L}^*$: critical layers from Phase 1 (top-3 layers per concept by probing accuracy)
+- $\lambda$: global auxiliary loss weight (tuned on val set, range $[0.01, 0.3]$)
+- $w_t$: per-concept weight, **set from Phase 1 empirical difficulty** (inversely proportional to peak probing accuracy):
 
-### 4.4 Training Data
+| Concept | Phase 1 Acc | $w_t$ (normalized) |
+|---|---|---|
+| br_direction | 0.638 | **1.57** |
+| eq_uniqueness | 0.731 | **1.37** |
+| eq_type | 0.748 | **1.34** |
+| dominance | 0.816 | **1.23** |
+| difficulty | 0.903 | **1.11** |
+| game_type | 0.996 | **1.00** |
 
-**Source:** GameSolve-Bench (2,400 samples) + optional augmentation via our generator.
+  Formula: $w_t = 1 / \text{acc}_t^{\text{Phase1}}$, then normalize so $\min(w_t) = 1$.
 
-**Label construction:** Each training sample already includes:
+- $\mathcal{T}$: concept label set. **Default: exclude game_type** (near-ceiling at 99.6%, provides negligible gradient signal). Use $\mathcal{T} = \{\text{eq\_type, difficulty, dominance, br\_direction, eq\_uniqueness}\}$
+- $\mathcal{L}^*$: three injection layers per the $\alpha \in \{1/4, 1/2, 2/3\}$ rule
+
+### 5.4 Training Data
+
+**Source:** GameSolve-Bench (2,400 samples) + augmentation to 10k via the generator (payoff perturbation, style mixing).
+
+**Label construction:** Each training sample includes:
 - Ground-truth game answer (for $\mathcal{L}_{\text{gen}}$)
 - Structured metadata: equilibrium type, game type, dominance flags, BR direction (for auxiliary losses $\mathcal{L}_{\text{CE}}$)
+- **Labels are derived automatically** from payoff matrices (no human annotation needed for scaling)
 
-**Description style mixing:** We sample uniformly from the 3 description styles (abstract / story / compact) to improve generalization across surface forms.
+**Description style mixing:** Uniform sampling from 3 description styles (abstract / story / compact).
 
-**Data split:** 70% train / 10% val (for $\lambda$, $w_t$ selection) / 20% held-out test.
+**Data split:** 70% train / 10% val (for $\lambda$ selection) / 20% held-out test.
 
-### 4.5 Backbone Fine-Tuning Strategy
+### 5.5 Backbone Fine-Tuning Strategy
 
-We evaluate three backbone regimes:
+Based on Phase 1 results, we focus on the **LoRA + Probe** regime (highest expected return):
 
-| Regime | Backbone | Probing Heads | # Trainable Params |
-|---|---|---|---|
-| **Probe-only** | Frozen | Trained | ~$6 \times d \times C$ |
-| **LoRA + Probe** | LoRA ($r=16$) | Trained | ~150M (7B model) |
-| **Full + Probe** | Full fine-tune | Trained | ~7B |
+| Regime | Backbone | Probing Heads | # Trainable Params | Priority |
+|---|---|---|---|---|
+| **LoRA + Probe** | LoRA ($r=16$, target: q,k,v,o) | Trained | ~50M (3B) / ~150M (7B) | **Primary** |
+| Probe-only | Frozen | Trained | ~$5 \times d \times C$ | Ablation baseline |
+| Full + Probe | Full fine-tune | Trained | Full model | Ablation (if compute allows) |
 
-We expect LoRA + Probe to dominate: enough backbone plasticity for the auxiliary signal to reshape representations, without the instability of full fine-tuning on a small dataset.
+**Rationale for LoRA + Probe as primary:** Phase 1 showed concepts are encoded in linear subspaces within hidden states, but not at sufficient fidelity for strategy-level concepts (br_direction: 63.8%, eq_type: 74.8%). LoRA provides enough backbone plasticity for auxiliary gradients to reshape these subspaces, while the probing heads provide the learning signal for *what* to encode.
 
-### 4.6 Inference
+### 5.6 Inference
 
-At inference time, the probing heads are **discarded**. The enhanced backbone is used directly for game solving. The benefit is entirely encoded in the updated LLM weights, with zero inference overhead.
+At inference time, the probing heads are **discarded**. The LoRA-merged backbone is used directly for game solving. The benefit is entirely encoded in the updated model weights, with **zero inference overhead**.
 
 ---
 
-## 5. Evaluation
+## 6. Evaluation
 
-### 5.1 Primary Metrics
+### 6.1 Primary Metrics
 
 **Game solving accuracy:** Exact-match accuracy on GameSolve-Bench held-out test set, broken down by:
 - Task: Nash Equilibrium identification vs. Best Response computation
@@ -202,25 +286,28 @@ At inference time, the probing heads are **discarded**. The enhanced backbone is
 - Step correctness (rubric-based, automatic): does each reasoning step correctly apply dominance elimination / Nash calculation?
 - Logical coherence (LLM-as-judge, GPT-4o): is the reasoning chain internally consistent?
 
-### 5.2 Diagnostic Metrics (Phase 1 Evaluation)
+### 6.2 Diagnostic Metrics (Phase 1 Evaluation)
 
 - Probing accuracy per (layer, concept): reported as mean ± std over 5 random seeds
 - Baseline: majority-class classifier, random linear probe (random $W$), upper bound: fine-tuned linear head on representations from task-specific SFT model
 
-### 5.3 Ablation Study
+### 6.3 Ablation Study
 
-| Ablation | Variable |
-|---|---|
-| No auxiliary loss | $\lambda = 0$ |
-| Coarse labels only | $\mathcal{T} = \{\text{eq\_type, game\_type, difficulty}\}$ |
-| Fine-grained labels only | $\mathcal{T} = \{\text{dominance, br\_direction, eq\_uniqueness}\}$ |
-| Random layer injection | $\mathcal{L}^*$ = random layers (not from Phase 1) |
-| Last layer only | $\mathcal{L}^* = \{L\}$ |
-| Uniform $w_t$ | $w_t = 1$ for all $t$ |
+| Ablation | Variable | Tests |
+|---|---|---|
+| No auxiliary loss | $\lambda = 0$ | Is aux supervision necessary at all? |
+| All 6 labels (incl. game_type) | $\mathcal{T} = \text{all 6}$ | Does near-ceiling game_type add signal or noise? |
+| Fine-grained only | $\mathcal{T} = \{\text{dominance, br\_direction, eq\_uniqueness}\}$ | Strategy-level concepts sufficient? |
+| Random layer injection | $\mathcal{L}^*$ = 3 random layers | Does the α ∈ {1/4, 1/2, 2/3} rule matter? |
+| Last layer only | $\mathcal{L}^* = \{L\}$ | Single deep injection vs. distributed |
+| Single mid-layer | $\mathcal{L}^* = \{\lfloor L/2 \rfloor\}$ | Is one well-chosen layer enough? |
+| Uniform $w_t$ | $w_t = 1$ for all $t$ | Does Phase 1-informed weighting help? |
+| Last-token pooling | Pool = last token (not weighted) | Does weighted pooling matter for training? |
+| Mean pooling | Pool = mean | Second-best pooling vs. weighted |
 
-The **random layer injection** ablation is critical: it tests whether the Phase 1 layer selection actually matters, vs. auxiliary supervision helping regardless of where it's injected.
+The **random layer injection** and **last-token pooling** ablations are the most critical: they test whether the Phase 1 empirical findings (layer selection, pooling choice) actually translate to training improvements vs. auxiliary supervision helping regardless of design choices.
 
-### 5.4 Generalization Evaluation
+### 6.4 Generalization Evaluation
 
 To test whether the enhancement transfers beyond GameSolve-Bench:
 - **TMGBench** (144 game types, story-based): tests surface-form generalization
@@ -231,51 +318,52 @@ We expect improvement on TMGBench (same domain, different surface), neutral on G
 
 ---
 
-## 6. Implementation Plan
+## 7. Implementation Plan
 
-### 6.1 Infrastructure
+### 7.1 Infrastructure
 
 ```
 GameSolve-Bench (2,400 samples)
-├── Phase 1: Probing Pipeline
-│   ├── representation_extractor.py   # Hook-based hidden state extraction
-│   ├── probe_trainer.py              # L-BFGS logistic regression per (layer, concept)
-│   ├── probe_analysis.py             # Accuracy curves, MI, linearity coefficient
-│   └── critical_layer_selector.py   # Select L* per concept
+├── Phase 1: Probing Pipeline (COMPLETE)
+│   ├── extract_representations.py         # Single-pooling hidden state extraction
+│   ├── extract_representations_multi.py   # Multi-pooling extraction (6 methods, single pass)
+│   ├── train_probes_parallel.py           # 8-GPU parallel L-BFGS probing
+│   ├── analyze_probes.py                  # Per-model accuracy curves, heatmaps
+│   └── analyze_pooling.py                 # Cross-pooling comparison analysis
 │
 └── Phase 2: Auxiliary Training Pipeline
-    ├── probing_head.py               # Linear heads with configurable stop-grad
-    ├── aux_loss_trainer.py           # Joint loss, LoRA + probe training loop
-    ├── weight_scheduler.py           # Adaptive w_t from Phase 1 accuracy
-    └── eval_pipeline.py              # GameSolve + TMGBench + GTBench eval
+    ├── model_with_probing_heads.py   # LoRA backbone + weighted-pool probing heads
+    ├── aux_loss_trainer.py           # Joint generation + auxiliary loss training loop
+    ├── phase1_config.py              # α-based layer selection, w_t from Phase 1
+    └── eval_pipeline.py              # GameSolve + generalization eval
 ```
 
-### 6.2 Timeline
+### 7.2 Timeline
 
-| Phase | Task | Duration |
-|---|---|---|
-| Phase 1 | Representation extraction (all models × all layers) | Week 1–2 |
-| Phase 1 | Probing classifier training + analysis | Week 2–3 |
-| Phase 1 | Write-up of diagnostic findings | Week 3–4 |
-| Phase 2 | Auxiliary training implementation | Week 4–5 |
-| Phase 2 | Hyperparameter search ($\lambda$, $w_t$, LoRA rank) | Week 5–6 |
-| Phase 2 | Ablation experiments | Week 6–7 |
-| Phase 2 | Generalization evaluation | Week 7–8 |
-| Both | Paper writing | Week 8–10 |
+| Phase | Task | Duration | Status |
+|---|---|---|---|
+| Phase 1 | Multi-pooling representation extraction (Qwen 1.5B, 3B) | Week 1 | ✓ Complete |
+| Phase 1 | 8-GPU parallel probe training (6 methods × 2 models) | Week 1 | ✓ Complete |
+| Phase 1 | Cross-pooling analysis & findings | Week 1 | ✓ Complete |
+| Phase 2 | Auxiliary training implementation (LoRA + weighted-pool heads) | Week 2 | |
+| Phase 2 | Hyperparameter search ($\lambda$, LoRA rank) on 3B model | Week 2–3 | |
+| Phase 2 | Ablation experiments (9 conditions) | Week 3–4 | |
+| Phase 2 | Scale to 7B models, generalization evaluation | Week 4–5 | |
+| Both | Paper writing | Week 5–7 | |
 
-### 6.3 Compute Estimate
+### 7.3 Compute Estimate (8× H20 96GB node)
 
 | Task | Hardware | Estimated Time |
 |---|---|---|
-| Phase 1 extraction (7B models, 2400 samples) | 1× A100 | ~4h per model |
-| Phase 1 extraction (70B models) | 4× A100 | ~12h per model |
-| Phase 1 probing training (all layers × 6 concepts) | CPU cluster | ~2h total |
-| Phase 2 LoRA fine-tuning (7B) | 2× A100 | ~6h per run |
-| Phase 2 full ablations (×8 conditions) | 2× A100 | ~50h total |
+| Phase 1 extraction (3B, 6 poolings, single pass) | 8× H20 (device_map=auto) | ~90s per model |
+| Phase 1 probing (36 layers × 6 concepts × 6 poolings) | 8× H20 parallel | ~400s per (model, pooling) |
+| Phase 2 LoRA + Probe training (3B, 10k samples) | 8× H20, tp=2 | ~2h per run |
+| Phase 2 full ablations (×9 conditions) | 8× H20 | ~18h total |
+| Phase 2 scale to 7B | 8× H20, tp=4 | ~4h per run |
 
 ---
 
-## 7. Expected Contributions
+## 8. Expected Contributions
 
 1. **First systematic linear probing study of game-theoretic concepts in LLMs**, producing an interpretability map of where and how strategic reasoning concepts are encoded across model families and scales.
 
@@ -290,7 +378,7 @@ GameSolve-Bench (2,400 samples)
 
 ---
 
-## 8. Related Work & Differentiation
+## 9. Related Work & Differentiation
 
 | Work | Method | Difference from Ours |
 |---|---|---|
@@ -302,7 +390,7 @@ GameSolve-Bench (2,400 samples)
 
 ---
 
-## 9. Open Questions & Risks
+## 10. Open Questions & Risks
 
 | Question | Mitigation |
 |---|---|
