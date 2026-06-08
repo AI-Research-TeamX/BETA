@@ -338,6 +338,6 @@ if __name__ == "__main__":
     torch.multiprocessing.set_start_method("spawn", force=True)
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_name", required=True)
-    parser.add_argument("--pooling", default="last", choices=["last", "mean"])
+    parser.add_argument("--pooling", default="last", choices=["last", "mean", "sum", "max", "first", "weighted"])
     args = parser.parse_args()
     run(args.model_name, args.pooling)
