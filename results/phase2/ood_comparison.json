@@ -1,0 +1,562 @@
+{
+  "Base (Qwen2.5-3B)": {
+    "id": {
+      "all": {
+        "mean": 0.5249320021111111,
+        "count": 200
+      },
+      "diff/easy": {
+        "mean": 0.5737800883534137,
+        "count": 83
+      },
+      "diff/hard": {
+        "mean": 0.5223942500000001,
+        "count": 18
+      },
+      "diff/medium": {
+        "mean": 0.4844399655443322,
+        "count": 99
+      },
+      "task/best_response": {
+        "mean": 0.6829215885057471,
+        "count": 87
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.40329400196656834,
+        "count": 113
+      },
+      "model_path": "./Qwen/Qwen2.5-3B-Instruct",
+      "n_samples": 200
+    },
+    "ood": {
+      "all": {
+        "mean": 0.433099075684997,
+        "count": 750
+      },
+      "dim/2x2": {
+        "mean": 0.5853274621495727,
+        "count": 195
+      },
+      "dim/2x5": {
+        "mean": 0.5798773987157287,
+        "count": 50
+      },
+      "dim/3x3": {
+        "mean": 0.4852342041089281,
+        "count": 195
+      },
+      "dim/3x5": {
+        "mean": 0.3232058823529412,
+        "count": 25
+      },
+      "dim/4x2": {
+        "mean": 0.5269719007142857,
+        "count": 50
+      },
+      "dim/5x3": {
+        "mean": 0.70602632,
+        "count": 25
+      },
+      "dim/5x5": {
+        "mean": 0.1897209317751323,
+        "count": 120
+      },
+      "dim/6x6": {
+        "mean": 0.13583333333333333,
+        "count": 90
+      },
+      "ood/asymmetric": {
+        "mean": 0.5404884668688283,
+        "count": 150
+      },
+      "ood/combined_hard": {
+        "mean": 0.11989795918367346,
+        "count": 70
+      },
+      "ood/large_matrix": {
+        "mean": 0.18999039050113378,
+        "count": 140
+      },
+      "ood/non_integer": {
+        "mean": 0.5415306112733586,
+        "count": 120
+      },
+      "ood/novel_format_json": {
+        "mean": 0.6103212083333334,
+        "count": 60
+      },
+      "ood/novel_format_math": {
+        "mean": 0.5985453311111111,
+        "count": 60
+      },
+      "ood/novel_format_table": {
+        "mean": 0.5164309764309764,
+        "count": 30
+      },
+      "ood/wide_range": {
+        "mean": 0.4645910825667388,
+        "count": 120
+      },
+      "task/best_response": {
+        "mean": 0.48042148739583335,
+        "count": 360
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.3894168494903789,
+        "count": 390
+      },
+      "model_path": "./Qwen/Qwen2.5-3B-Instruct",
+      "n_samples": 750,
+      "gen_time_s": 93.4,
+      "throughput": 8.0
+    }
+  },
+  "GRPO-only": {
+    "id": {
+      "all": {
+        "mean": 0.515229787,
+        "count": 200
+      },
+      "diff/easy": {
+        "mean": 0.5701756787148594,
+        "count": 83
+      },
+      "diff/hard": {
+        "mean": 0.5579550833333333,
+        "count": 18
+      },
+      "diff/medium": {
+        "mean": 0.4613958037037037,
+        "count": 99
+      },
+      "task/best_response": {
+        "mean": 0.6562753724137932,
+        "count": 87
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.40663716814159295,
+        "count": 113
+      },
+      "model_path": "results/phase2/full_grpo_only/checkpoint-best/model",
+      "n_samples": 200
+    },
+    "ood": {
+      "all": {
+        "mean": 0.4331336059330388,
+        "count": 750
+      },
+      "dim/2x2": {
+        "mean": 0.5728513664316239,
+        "count": 195
+      },
+      "dim/2x5": {
+        "mean": 0.5744780297546898,
+        "count": 50
+      },
+      "dim/3x3": {
+        "mean": 0.47906606497310095,
+        "count": 195
+      },
+      "dim/3x5": {
+        "mean": 0.357578431372549,
+        "count": 25
+      },
+      "dim/4x2": {
+        "mean": 0.5375430645238095,
+        "count": 50
+      },
+      "dim/5x3": {
+        "mean": 0.6357276152,
+        "count": 25
+      },
+      "dim/5x5": {
+        "mean": 0.24104943984126984,
+        "count": 120
+      },
+      "dim/6x6": {
+        "mean": 0.1151851851851852,
+        "count": 90
+      },
+      "ood/asymmetric": {
+        "mean": 0.5362247058549245,
+        "count": 150
+      },
+      "ood/combined_hard": {
+        "mean": 0.11428571428571428,
+        "count": 70
+      },
+      "ood/large_matrix": {
+        "mean": 0.2235185674829932,
+        "count": 140
+      },
+      "ood/non_integer": {
+        "mean": 0.535715945351461,
+        "count": 120
+      },
+      "ood/novel_format_json": {
+        "mean": 0.5749784594444445,
+        "count": 60
+      },
+      "ood/novel_format_math": {
+        "mean": 0.6014448055555556,
+        "count": 60
+      },
+      "ood/novel_format_table": {
+        "mean": 0.47939153439153437,
+        "count": 30
+      },
+      "ood/wide_range": {
+        "mean": 0.4655903645833333,
+        "count": 120
+      },
+      "task/best_response": {
+        "mean": 0.5181512360115741,
+        "count": 360
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.35465579355285237,
+        "count": 390
+      },
+      "model_path": "results/phase2/full_grpo_only/checkpoint-best/model",
+      "n_samples": 750,
+      "gen_time_s": 91.9,
+      "throughput": 8.2
+    }
+  },
+  "Full+Probe GRPO": {
+    "id": {
+      "all": {
+        "mean": 0.48396255004761907,
+        "count": 200
+      },
+      "diff/easy": {
+        "mean": 0.5083973012048193,
+        "count": 83
+      },
+      "diff/hard": {
+        "mean": 0.5367083055555555,
+        "count": 18
+      },
+      "diff/medium": {
+        "mean": 0.4538867122174122,
+        "count": 99
+      },
+      "task/best_response": {
+        "mean": 0.6423331747126436,
+        "count": 87
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.36203118415507796,
+        "count": 113
+      },
+      "model_path": "results/phase2/full_probe_grpo/checkpoint-best/model",
+      "n_samples": 200
+    },
+    "ood": {
+      "all": {
+        "mean": 0.4356252527218657,
+        "count": 750
+      },
+      "dim/2x2": {
+        "mean": 0.6170527247435897,
+        "count": 195
+      },
+      "dim/2x5": {
+        "mean": 0.5434136313419914,
+        "count": 50
+      },
+      "dim/3x3": {
+        "mean": 0.46421113513715917,
+        "count": 195
+      },
+      "dim/3x5": {
+        "mean": 0.3317058823529412,
+        "count": 25
+      },
+      "dim/4x2": {
+        "mean": 0.5169353195238096,
+        "count": 50
+      },
+      "dim/5x3": {
+        "mean": 0.7054085311999999,
+        "count": 25
+      },
+      "dim/5x5": {
+        "mean": 0.21278944568783068,
+        "count": 120
+      },
+      "dim/6x6": {
+        "mean": 0.1265827277777778,
+        "count": 90
+      },
+      "ood/asymmetric": {
+        "mean": 0.5263020525474238,
+        "count": 150
+      },
+      "ood/combined_hard": {
+        "mean": 0.11061224489795918,
+        "count": 70
+      },
+      "ood/large_matrix": {
+        "mean": 0.20845944171201813,
+        "count": 140
+      },
+      "ood/non_integer": {
+        "mean": 0.5751349540191799,
+        "count": 120
+      },
+      "ood/novel_format_json": {
+        "mean": 0.5729886527777778,
+        "count": 60
+      },
+      "ood/novel_format_math": {
+        "mean": 0.6531449777777778,
+        "count": 60
+      },
+      "ood/novel_format_table": {
+        "mean": 0.5528703703703705,
+        "count": 30
+      },
+      "ood/wide_range": {
+        "mean": 0.43063441041666667,
+        "count": 120
+      },
+      "task/best_response": {
+        "mean": 0.5036168057175926,
+        "count": 360
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.37286381918734857,
+        "count": 390
+      },
+      "model_path": "results/phase2/full_probe_grpo/checkpoint-best/model",
+      "n_samples": 750,
+      "gen_time_s": 92.2,
+      "throughput": 8.1
+    }
+  },
+  "SFT (CoT)": {
+    "id": {
+      "all": {
+        "mean": 0.9451021401666666,
+        "count": 200
+      },
+      "diff/easy": {
+        "mean": 0.9802326084337349,
+        "count": 83
+      },
+      "diff/hard": {
+        "mean": 0.8665815277777777,
+        "count": 18
+      },
+      "diff/medium": {
+        "mean": 0.929925798316498,
+        "count": 99
+      },
+      "task/best_response": {
+        "mean": 0.9769250517241379,
+        "count": 87
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.920601314454277,
+        "count": 113
+      },
+      "model_path": "results/phase2/sft_cot/checkpoint-best",
+      "n_samples": 200
+    },
+    "ood": {
+      "all": {
+        "mean": 0.7341573141620947,
+        "count": 750
+      },
+      "dim/2x2": {
+        "mean": 0.879045182213675,
+        "count": 195
+      },
+      "dim/2x5": {
+        "mean": 0.9054942913333335,
+        "count": 50
+      },
+      "dim/3x3": {
+        "mean": 0.8049485278393163,
+        "count": 195
+      },
+      "dim/3x5": {
+        "mean": 0.6911428571428572,
+        "count": 25
+      },
+      "dim/4x2": {
+        "mean": 0.86244216,
+        "count": 50
+      },
+      "dim/5x3": {
+        "mean": 0.933329264,
+        "count": 25
+      },
+      "dim/5x5": {
+        "mean": 0.47471185888333334,
+        "count": 120
+      },
+      "dim/6x6": {
+        "mean": 0.4029462611111111,
+        "count": 90
+      },
+      "ood/asymmetric": {
+        "mean": 0.860057503968254,
+        "count": 150
+      },
+      "ood/combined_hard": {
+        "mean": 0.24503535522857145,
+        "count": 70
+      },
+      "ood/large_matrix": {
+        "mean": 0.5434150835714286,
+        "count": 140
+      },
+      "ood/non_integer": {
+        "mean": 0.8959162996694445,
+        "count": 120
+      },
+      "ood/novel_format_json": {
+        "mean": 0.8652554083333331,
+        "count": 60
+      },
+      "ood/novel_format_math": {
+        "mean": 0.7146541738888886,
+        "count": 60
+      },
+      "ood/novel_format_table": {
+        "mean": 0.8397777822222222,
+        "count": 30
+      },
+      "ood/wide_range": {
+        "mean": 0.8406742425,
+        "count": 120
+      },
+      "task/best_response": {
+        "mean": 0.8637447372027778,
+        "count": 360
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.6145381544322341,
+        "count": 390
+      },
+      "model_path": "results/phase2/sft_cot/checkpoint-best",
+      "n_samples": 750,
+      "gen_time_s": 75.9,
+      "throughput": 9.9
+    }
+  },
+  "SFT \u2192 GRPO": {
+    "id": {
+      "all": {
+        "mean": 0.9350840720833333,
+        "count": 200
+      },
+      "diff/easy": {
+        "mean": 0.9801770301204819,
+        "count": 83
+      },
+      "diff/hard": {
+        "mean": 0.8672513194444444,
+        "count": 18
+      },
+      "diff/medium": {
+        "mean": 0.9096120925925923,
+        "count": 99
+      },
+      "task/best_response": {
+        "mean": 0.9770172614942528,
+        "count": 87
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.9027992271386428,
+        "count": 113
+      },
+      "model_path": "results/phase2/sft_then_grpo/checkpoint-best/model",
+      "n_samples": 200
+    },
+    "ood": {
+      "all": {
+        "mean": 0.729927075522539,
+        "count": 750
+      },
+      "dim/2x2": {
+        "mean": 0.876671274331624,
+        "count": 195
+      },
+      "dim/2x5": {
+        "mean": 0.8980172446666669,
+        "count": 50
+      },
+      "dim/3x3": {
+        "mean": 0.7993274377264956,
+        "count": 195
+      },
+      "dim/3x5": {
+        "mean": 0.6591999931428572,
+        "count": 25
+      },
+      "dim/4x2": {
+        "mean": 0.8656982733333334,
+        "count": 50
+      },
+      "dim/5x3": {
+        "mean": 0.953243952,
+        "count": 25
+      },
+      "dim/5x5": {
+        "mean": 0.46984657718333334,
+        "count": 120
+      },
+      "dim/6x6": {
+        "mean": 0.3971899333333333,
+        "count": 90
+      },
+      "ood/asymmetric": {
+        "mean": 0.8566458301904764,
+        "count": 150
+      },
+      "ood/combined_hard": {
+        "mean": 0.24591758088571428,
+        "count": 70
+      },
+      "ood/large_matrix": {
+        "mean": 0.5351032328571429,
+        "count": 140
+      },
+      "ood/non_integer": {
+        "mean": 0.8964659029277778,
+        "count": 120
+      },
+      "ood/novel_format_json": {
+        "mean": 0.85509275,
+        "count": 60
+      },
+      "ood/novel_format_math": {
+        "mean": 0.7254432405555555,
+        "count": 60
+      },
+      "ood/novel_format_table": {
+        "mean": 0.7786666711111111,
+        "count": 30
+      },
+      "ood/wide_range": {
+        "mean": 0.842097341111111,
+        "count": 120
+      },
+      "task/best_response": {
+        "mean": 0.8600111796666667,
+        "count": 360
+      },
+      "task/nash_equilibrium": {
+        "mean": 0.6098494409279606,
+        "count": 390
+      },
+      "model_path": "results/phase2/sft_then_grpo/checkpoint-best/model",
+      "n_samples": 750,
+      "gen_time_s": 75.9,
+      "throughput": 9.9
+    }
+  }
+}

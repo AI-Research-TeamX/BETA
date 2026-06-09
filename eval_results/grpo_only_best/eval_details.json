@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "br_3x3_zero_sum_fd0e450275",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.421956,
+    "response_length": 1657
+  },
+  {
+    "id": "br_2x2_general_ee76d66418",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.346692,
+    "response_length": 1168
+  },
+  {
+    "id": "br_2x2_general_d83449f1bc",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.49152999999999997,
+    "response_length": 1508
+  },
+  {
+    "id": "br_3x3_zero_sum_e2b62dacb5",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.990306,
+    "response_length": 1550
+  },
+  {
+    "id": "br_4x4_general_68e0b6134d",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.994,
+    "response_length": 1927
+  },
+  {
+    "id": "br_3x2_general_5527e94b56",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 1.0,
+    "response_length": 1409
+  },
+  {
+    "id": "nash_2x2_symmetric_a987aa755b",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.65,
+    "response_length": 1992
+  },
+  {
+    "id": "nash_2x2_general_a42d4d9885",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1650
+  },
+  {
+    "id": "br_2x2_general_1e754b061b",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.3121175,
+    "response_length": 990
+  },
+  {
+    "id": "nash_3x3_zero_sum_01305a5310",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 3250
+  },
+  {
+    "id": "nash_2x2_zero_sum_decf759cc7",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 2671
+  },
+  {
+    "id": "nash_3x3_zero_sum_0ba81fbc65",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 3176
+  },
+  {
+    "id": "nash_3x3_general_ba7ab1a17c",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.6666666666666667,
+    "response_length": 3516
+  },
+  {
+    "id": "br_2x2_general_fd2f470f63",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.833421,
+    "response_length": 1596
+  },
+  {
+    "id": "nash_2x2_general_44a34fde2b",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2086
+  },
+  {
+    "id": "br_2x2_general_cd96df7267",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.20613150000000002,
+    "response_length": 1541
+  },
+  {
+    "id": "nash_2x2_general_6b4d7c051f",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2845
+  },
+  {
+    "id": "br_3x3_zero_sum_8c2c8b32a2",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.9338960000000001,
+    "response_length": 1679
+  },
+  {
+    "id": "nash_2x2_general_043d742a7c",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 3328
+  },
+  {
+    "id": "nash_3x3_general_4ff906897c",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2846
+  },
+  {
+    "id": "nash_2x2_general_3082b18b78",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.5,
+    "response_length": 1960
+  },
+  {
+    "id": "br_3x2_general_6d00747832",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.28059,
+    "response_length": 1333
+  },
+  {
+    "id": "nash_2x2_general_139ae4a6de",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.8333333333333333,
+    "response_length": 2717
+  },
+  {
+    "id": "nash_2x2_symmetric_030a5479ee",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 3085
+  },
+  {
+    "id": "nash_3x3_general_1d16d4d9ff",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2584
+  },
+  {
+    "id": "nash_2x2_general_f83832e385",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 3062
+  },
+  {
+    "id": "br_2x3_general_c4300c6bae",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.7439209999999999,
+    "response_length": 1389
+  },
+  {
+    "id": "nash_2x3_general_bc8904b02e",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.75,
+    "response_length": 2035
+  },
+  {
+    "id": "nash_4x4_general_bbb646f4ae",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.6000000000000001,
+    "response_length": 2465
+  },
+  {
+    "id": "br_3x3_general_7e177c596c",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.223347,
+    "response_length": 1159
+  },
+  {
+    "id": "nash_2x2_general_8e765c5765",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2351
+  },
+  {
+    "id": "nash_2x2_zero_sum_490d3af2a5",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2969
+  },
+  {
+    "id": "nash_2x2_general_2929d1619d",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 3028
+  },
+  {
+    "id": "br_2x2_general_7cde9af717",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.22570949999999998,
+    "response_length": 1261
+  },
+  {
+    "id": "br_2x2_general_9106a17261",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.8,
+    "response_length": 985
+  },
+  {
+    "id": "nash_3x3_symmetric_448f145ca5",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.15,
+    "response_length": 2181
+  },
+  {
+    "id": "br_2x2_general_a879ecb67b",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.9951999999999999,
+    "response_length": 1058
+  },
+  {
+    "id": "nash_2x2_general_3e3611d243",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2895
+  },
+  {
+    "id": "br_2x2_general_444b317bab",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.8,
+    "response_length": 1300
+  },
+  {
+    "id": "nash_3x3_general_64a72d21ff",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.75,
+    "response_length": 2789
+  },
+  {
+    "id": "nash_4x4_general_474e18a1e7",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 1765
+  },
+  {
+    "id": "nash_3x3_general_af57245d8b",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2890
+  },
+  {
+    "id": "nash_2x2_general_774eec878e",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 3108
+  },
+  {
+    "id": "nash_2x2_general_07c10d7d90",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1781
+  },
+  {
+    "id": "nash_2x2_zero_sum_68483d7d9d",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1532
+  },
+  {
+    "id": "nash_2x2_general_761e6796b3",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 1818
+  },
+  {
+    "id": "br_4x4_general_b5d4220e1e",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.38682125,
+    "response_length": 1964
+  },
+  {
+    "id": "nash_3x3_zero_sum_e16ad3de84",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 3041
+  },
+  {
+    "id": "nash_2x2_symmetric_f17f4d1f1a",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 1602
+  },
+  {
+    "id": "br_3x3_zero_sum_dd307e9358",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.7426809999999999,
+    "response_length": 1204
+  },
+  {
+    "id": "br_3x3_zero_sum_8161de00b0",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.881175,
+    "response_length": 1856
+  },
+  {
+    "id": "br_4x4_general_5d9c9e5fb6",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.36308549999999995,
+    "response_length": 1644
+  },
+  {
+    "id": "nash_2x2_general_da0bbe82aa",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 3034
+  },
+  {
+    "id": "nash_3x3_symmetric_d9e45d3c30",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 3337
+  },
+  {
+    "id": "nash_2x2_symmetric_77e4781ebc",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 3024
+  },
+  {
+    "id": "br_2x2_general_dd0f904a0c",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.874876,
+    "response_length": 1487
+  },
+  {
+    "id": "nash_2x2_general_a8f0d15068",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2437
+  },
+  {
+    "id": "nash_2x2_zero_sum_0940d7d3ca",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.8333333333333333,
+    "response_length": 2170
+  },
+  {
+    "id": "nash_2x2_symmetric_6bf5a2b90e",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 2990
+  },
+  {
+    "id": "nash_2x3_general_426a3b63db",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 2857
+  },
+  {
+    "id": "nash_2x3_general_c69bb7b925",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 3236
+  },
+  {
+    "id": "br_3x3_general_979aed8b9d",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.980804,
+    "response_length": 1886
+  },
+  {
+    "id": "nash_2x2_zero_sum_d2aece78dc",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 3126
+  },
+  {
+    "id": "br_3x2_general_05a9dccc83",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 1.0,
+    "response_length": 1405
+  },
+  {
+    "id": "nash_2x3_general_8ccd7d43af",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.65,
+    "response_length": 1667
+  },
+  {
+    "id": "nash_3x3_symmetric_f05d256be0",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 3395
+  },
+  {
+    "id": "br_3x3_zero_sum_8ce8edbb55",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.38798200000000005,
+    "response_length": 1454
+  },
+  {
+    "id": "br_2x3_general_9fd2b23d2b",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.8,
+    "response_length": 1674
+  },
+  {
+    "id": "br_2x2_general_44c85e0d2a",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.37873599999999996,
+    "response_length": 1626
+  },
+  {
+    "id": "nash_2x2_general_fe3b0d86a0",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 1326
+  },
+  {
+    "id": "nash_2x3_general_8d4f5ba705",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 2550
+  },
+  {
+    "id": "nash_3x2_general_5364d3bdda",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 3450
+  },
+  {
+    "id": "nash_3x2_general_025fa2619a",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 1862
+  },
+  {
+    "id": "nash_3x2_general_fc5a212eb8",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2752
+  },
+  {
+    "id": "br_4x4_general_f803757fe4",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.94915575,
+    "response_length": 1592
+  },
+  {
+    "id": "nash_4x4_general_b22f3e2740",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2142
+  },
+  {
+    "id": "br_2x2_zero_sum_872919de13",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.8,
+    "response_length": 1095
+  },
+  {
+    "id": "nash_2x2_general_32259666b5",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.8333333333333333,
+    "response_length": 2708
+  },
+  {
+    "id": "nash_2x2_symmetric_f489e3dd8b",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1819
+  },
+  {
+    "id": "br_2x2_zero_sum_254d1e4be2",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 992
+  },
+  {
+    "id": "nash_4x4_general_014fe61593",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2584
+  },
+  {
+    "id": "nash_2x2_general_2a266be038",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.7,
+    "response_length": 1682
+  },
+  {
+    "id": "br_2x2_general_afc1a887e9",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.287859,
+    "response_length": 1208
+  },
+  {
+    "id": "br_3x2_general_956e75d20a",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.44568,
+    "response_length": 1390
+  },
+  {
+    "id": "br_2x2_general_e8e68d8ff3",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.8928005,
+    "response_length": 1515
+  },
+  {
+    "id": "br_2x2_general_4706ad1822",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1387
+  },
+  {
+    "id": "br_2x2_general_e4e6fc46b0",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.8,
+    "response_length": 1572
+  },
+  {
+    "id": "nash_2x3_general_5b7bb9829a",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2897
+  },
+  {
+    "id": "nash_3x3_zero_sum_d9bad2abd8",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2203
+  },
+  {
+    "id": "nash_3x3_general_e86a367c4c",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 2533
+  },
+  {
+    "id": "br_2x2_general_83f32c940b",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.7985,
+    "response_length": 1238
+  },
+  {
+    "id": "nash_2x2_general_2e1890cb2e",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.8333333333333333,
+    "response_length": 1676
+  },
+  {
+    "id": "br_2x2_zero_sum_45d97de1e9",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.420169,
+    "response_length": 1628
+  },
+  {
+    "id": "br_2x3_general_afcb749e41",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.8,
+    "response_length": 1478
+  },
+  {
+    "id": "br_3x3_general_7c0ec184b2",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.212114,
+    "response_length": 1802
+  },
+  {
+    "id": "br_3x2_general_7abfc73c94",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.131964,
+    "response_length": 1251
+  },
+  {
+    "id": "nash_2x2_symmetric_e11c740cec",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.8333333333333333,
+    "response_length": 1988
+  },
+  {
+    "id": "nash_3x2_general_f660fec856",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.8333333333333333,
+    "response_length": 1795
+  },
+  {
+    "id": "nash_3x3_general_494f99d8a9",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2991
+  },
+  {
+    "id": "nash_3x2_general_fc07a1b30b",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.8333333333333333,
+    "response_length": 1861
+  },
+  {
+    "id": "nash_2x2_general_1a1d0951ba",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1673
+  },
+  {
+    "id": "br_3x3_zero_sum_32af81b43d",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.349833,
+    "response_length": 1695
+  },
+  {
+    "id": "nash_2x2_symmetric_c469e13bd6",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 3013
+  },
+  {
+    "id": "br_2x2_general_581d1501a4",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.7994,
+    "response_length": 1220
+  },
+  {
+    "id": "nash_3x3_symmetric_2ac2e0349e",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 3189
+  },
+  {
+    "id": "br_3x2_general_45024f7a6c",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 1.0,
+    "response_length": 1229
+  },
+  {
+    "id": "nash_2x2_symmetric_e52c82f553",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2560
+  },
+  {
+    "id": "nash_3x3_zero_sum_61ecc983df",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 3208
+  },
+  {
+    "id": "br_3x3_zero_sum_a913f754f1",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.290506,
+    "response_length": 1852
+  },
+  {
+    "id": "br_3x3_zero_sum_a1755292c1",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.79261,
+    "response_length": 1620
+  },
+  {
+    "id": "nash_2x2_general_bb04f75901",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.5,
+    "response_length": 1345
+  },
+  {
+    "id": "nash_2x3_general_d89579308a",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2520
+  },
+  {
+    "id": "nash_2x2_general_877bcd609c",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1614
+  },
+  {
+    "id": "br_3x3_general_03cec57d08",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.22595299999999996,
+    "response_length": 2107
+  },
+  {
+    "id": "br_2x3_general_2750511c1f",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.425605,
+    "response_length": 1298
+  },
+  {
+    "id": "nash_2x2_general_ba72c1d352",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2155
+  },
+  {
+    "id": "br_2x2_general_87c34b44a8",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.79271,
+    "response_length": 1216
+  },
+  {
+    "id": "br_2x2_general_4031e52d01",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.337884,
+    "response_length": 1075
+  },
+  {
+    "id": "nash_3x3_zero_sum_d30f3666f4",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.7,
+    "response_length": 3442
+  },
+  {
+    "id": "br_3x3_general_a463e27541",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.359525,
+    "response_length": 1166
+  },
+  {
+    "id": "nash_2x2_general_6253fdb5a1",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.8333333333333333,
+    "response_length": 1944
+  },
+  {
+    "id": "nash_2x2_general_9a5959cf3a",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 1132
+  },
+  {
+    "id": "nash_3x3_zero_sum_17290a59ee",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 2925
+  },
+  {
+    "id": "br_4x4_general_f377e9e788",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.955198,
+    "response_length": 1834
+  },
+  {
+    "id": "nash_3x3_zero_sum_bac2ad69c1",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2142
+  },
+  {
+    "id": "br_3x3_general_a7c2e08cf0",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.17384199999999997,
+    "response_length": 1772
+  },
+  {
+    "id": "br_2x3_general_493189a3f8",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.9569814999999999,
+    "response_length": 1572
+  },
+  {
+    "id": "nash_2x2_symmetric_594505323e",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.8333333333333333,
+    "response_length": 2084
+  },
+  {
+    "id": "br_3x2_general_67c8be6051",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.798505,
+    "response_length": 1513
+  },
+  {
+    "id": "nash_3x3_symmetric_07c7e904f4",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 3200
+  },
+  {
+    "id": "nash_2x2_general_035c0ec585",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2987
+  },
+  {
+    "id": "br_3x2_general_e33496262d",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.770176,
+    "response_length": 1586
+  },
+  {
+    "id": "nash_3x3_zero_sum_7feb6498e2",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 2960
+  },
+  {
+    "id": "br_2x2_general_8a60fb129d",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1078
+  },
+  {
+    "id": "nash_2x2_zero_sum_ea710786c9",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1312
+  },
+  {
+    "id": "br_3x3_zero_sum_9398444a3b",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.23958999999999997,
+    "response_length": 1862
+  },
+  {
+    "id": "nash_2x3_general_06c18f87b6",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2625
+  },
+  {
+    "id": "nash_2x2_zero_sum_0faaeb05ba",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.5,
+    "response_length": 2173
+  },
+  {
+    "id": "nash_2x3_general_17b8b820de",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2879
+  },
+  {
+    "id": "nash_2x3_general_87590187fe",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 1213
+  },
+  {
+    "id": "br_4x4_general_777ceedbc9",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.0,
+    "response_length": 2061
+  },
+  {
+    "id": "nash_2x2_general_01ec939a0a",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1529
+  },
+  {
+    "id": "nash_2x2_general_28ac141d32",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2828
+  },
+  {
+    "id": "nash_3x3_zero_sum_ead0e4cbcd",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 3177
+  },
+  {
+    "id": "br_2x2_general_3c221da0fa",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.8,
+    "response_length": 1365
+  },
+  {
+    "id": "nash_2x2_general_205af2dc13",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.5,
+    "response_length": 1820
+  },
+  {
+    "id": "nash_4x4_general_ce7423f665",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.0,
+    "response_length": 2459
+  },
+  {
+    "id": "br_2x2_general_ad8862d2b8",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.89773,
+    "response_length": 1225
+  },
+  {
+    "id": "nash_2x2_general_34fe30004b",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 2601
+  },
+  {
+    "id": "nash_3x3_general_bf1679d0be",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2638
+  },
+  {
+    "id": "br_2x3_general_fe4352c2d6",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 1.0,
+    "response_length": 1764
+  },
+  {
+    "id": "nash_2x2_general_1478063569",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2932
+  },
+  {
+    "id": "nash_3x3_zero_sum_1f87b3f8c3",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 2565
+  },
+  {
+    "id": "br_2x3_general_24f090033d",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.9680259999999999,
+    "response_length": 1225
+  },
+  {
+    "id": "br_2x2_general_93fe1f8cfd",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.923616,
+    "response_length": 1196
+  },
+  {
+    "id": "nash_3x2_general_1ca39abd59",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.8333333333333333,
+    "response_length": 2177
+  },
+  {
+    "id": "br_4x4_general_bfa61e7ae5",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.9702085,
+    "response_length": 1535
+  },
+  {
+    "id": "br_3x3_zero_sum_74105f5147",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.722815,
+    "response_length": 1661
+  },
+  {
+    "id": "nash_2x2_general_a049b4335b",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.5,
+    "response_length": 2197
+  },
+  {
+    "id": "br_2x2_general_adeafcc56e",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1436
+  },
+  {
+    "id": "br_3x3_general_cd789f4847",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.270727,
+    "response_length": 1746
+  },
+  {
+    "id": "nash_2x3_general_5d2a60c022",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 3151
+  },
+  {
+    "id": "br_3x3_general_f978be8916",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.476544,
+    "response_length": 1135
+  },
+  {
+    "id": "nash_3x3_general_f3937bb88f",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 3003
+  },
+  {
+    "id": "nash_3x2_general_811900d441",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 3105
+  },
+  {
+    "id": "br_3x2_general_15f8966a12",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.4581799999999999,
+    "response_length": 1053
+  },
+  {
+    "id": "nash_2x2_general_7d7a2f85a4",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2763
+  },
+  {
+    "id": "nash_2x2_zero_sum_4ba4920b97",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 3075
+  },
+  {
+    "id": "nash_3x3_symmetric_0b87a76d53",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2997
+  },
+  {
+    "id": "br_3x2_general_fb3de2f138",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.12491600000000001,
+    "response_length": 1546
+  },
+  {
+    "id": "nash_2x3_general_4a1f19292d",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2790
+  },
+  {
+    "id": "nash_2x2_zero_sum_29540f64f2",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 1447
+  },
+  {
+    "id": "br_3x3_general_abf0067d66",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.7999959999999999,
+    "response_length": 1752
+  },
+  {
+    "id": "nash_3x3_general_5ab95ab431",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 3052
+  },
+  {
+    "id": "br_4x4_general_f7d4832989",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.4384025,
+    "response_length": 1781
+  },
+  {
+    "id": "br_2x3_general_6d209eac12",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.895385,
+    "response_length": 1520
+  },
+  {
+    "id": "br_2x2_zero_sum_771cdd4c3e",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.97318,
+    "response_length": 1589
+  },
+  {
+    "id": "br_2x3_general_649c747bbb",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.78035,
+    "response_length": 1552
+  },
+  {
+    "id": "nash_2x2_zero_sum_47d1c4be4b",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 3493
+  },
+  {
+    "id": "nash_3x3_general_1d6d49f870",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2951
+  },
+  {
+    "id": "nash_2x2_general_4b635ac91a",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 1928
+  },
+  {
+    "id": "br_2x2_zero_sum_5b3c872301",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.770105,
+    "response_length": 1436
+  },
+  {
+    "id": "nash_3x3_zero_sum_97792096d8",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.5,
+    "response_length": 2741
+  },
+  {
+    "id": "nash_2x2_zero_sum_b65cbf3e66",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.5,
+    "response_length": 1745
+  },
+  {
+    "id": "br_3x2_general_9dc53f5aa5",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.968402,
+    "response_length": 1351
+  },
+  {
+    "id": "nash_2x2_zero_sum_45cf333185",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 1812
+  },
+  {
+    "id": "br_2x3_general_e24604436d",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.8,
+    "response_length": 1710
+  },
+  {
+    "id": "br_3x2_general_602f451aff",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.92292,
+    "response_length": 1720
+  },
+  {
+    "id": "nash_2x2_general_e4d694191d",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 2808
+  },
+  {
+    "id": "br_3x3_general_c7faee267d",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.368737,
+    "response_length": 1454
+  },
+  {
+    "id": "nash_3x3_zero_sum_a6983a4cec",
+    "task": "nash_equilibrium",
+    "difficulty": "hard",
+    "reward": 0.5,
+    "response_length": 2978
+  },
+  {
+    "id": "br_2x2_general_9afd0e912e",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 1.0,
+    "response_length": 1231
+  },
+  {
+    "id": "nash_2x2_zero_sum_a7ff71653c",
+    "task": "nash_equilibrium",
+    "difficulty": "easy",
+    "reward": 0.2,
+    "response_length": 1495
+  },
+  {
+    "id": "nash_3x3_general_919efb32b5",
+    "task": "nash_equilibrium",
+    "difficulty": "medium",
+    "reward": 0.2,
+    "response_length": 2060
+  },
+  {
+    "id": "br_2x2_general_1cab385ae8",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.747881,
+    "response_length": 1722
+  },
+  {
+    "id": "br_2x2_general_d9de45ee4d",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.285,
+    "response_length": 1710
+  },
+  {
+    "id": "br_4x4_general_6c3667da4e",
+    "task": "best_response",
+    "difficulty": "hard",
+    "reward": 0.48632,
+    "response_length": 1766
+  },
+  {
+    "id": "br_3x3_general_b2dd639ea7",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.7863564000000001,
+    "response_length": 1523
+  },
+  {
+    "id": "br_2x2_zero_sum_0306e2ebfa",
+    "task": "best_response",
+    "difficulty": "easy",
+    "reward": 0.8,
+    "response_length": 1154
+  },
+  {
+    "id": "br_3x3_general_7585f1d4d1",
+    "task": "best_response",
+    "difficulty": "medium",
+    "reward": 0.458621,
+    "response_length": 1570
+  }
+]

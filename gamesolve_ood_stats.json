@@ -1,0 +1,179 @@
+{
+  "total": 750,
+  "by_task": {
+    "nash_equilibrium": 390,
+    "best_response": 360
+  },
+  "by_ood_category": {
+    "large_matrix": 140,
+    "non_integer": 120,
+    "wide_range": 120,
+    "novel_format_math": 60,
+    "novel_format_json": 60,
+    "novel_format_table": 30,
+    "asymmetric": 150,
+    "combined_hard": 70
+  },
+  "by_config": {
+    "nash_5x5_large_matrix": {
+      "target": 40,
+      "generated": 40,
+      "attempts": 43
+    },
+    "nash_6x6_large_matrix": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 33
+    },
+    "br_5x5_large_matrix": {
+      "target": 40,
+      "generated": 40,
+      "attempts": 40
+    },
+    "br_6x6_large_matrix": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 30
+    },
+    "nash_2x2_non_integer": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 30
+    },
+    "nash_3x3_non_integer": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 34
+    },
+    "br_2x2_non_integer": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 30
+    },
+    "br_3x3_non_integer": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 30
+    },
+    "nash_2x2_wide_range": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 30
+    },
+    "nash_3x3_wide_range": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 33
+    },
+    "br_2x2_wide_range": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 30
+    },
+    "br_3x3_wide_range": {
+      "target": 30,
+      "generated": 30,
+      "attempts": 30
+    },
+    "nash_2x2_novel_format_math": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "nash_3x3_novel_format_math": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "nash_2x2_novel_format_json": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "nash_3x3_novel_format_json": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "nash_2x2_novel_format_table": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "nash_3x3_novel_format_table": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "br_2x2_novel_format_math": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "br_3x3_novel_format_math": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "br_2x2_novel_format_json": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "br_3x3_novel_format_json": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    },
+    "nash_4x2_asymmetric": {
+      "target": 25,
+      "generated": 25,
+      "attempts": 27
+    },
+    "nash_2x5_asymmetric": {
+      "target": 25,
+      "generated": 25,
+      "attempts": 26
+    },
+    "nash_3x5_asymmetric": {
+      "target": 25,
+      "generated": 25,
+      "attempts": 27
+    },
+    "br_4x2_asymmetric": {
+      "target": 25,
+      "generated": 25,
+      "attempts": 25
+    },
+    "br_2x5_asymmetric": {
+      "target": 25,
+      "generated": 25,
+      "attempts": 25
+    },
+    "br_5x3_asymmetric": {
+      "target": 25,
+      "generated": 25,
+      "attempts": 25
+    },
+    "nash_5x5_combined_hard": {
+      "target": 20,
+      "generated": 20,
+      "attempts": 27
+    },
+    "nash_6x6_combined_hard": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 18
+    },
+    "br_5x5_combined_hard": {
+      "target": 20,
+      "generated": 20,
+      "attempts": 20
+    },
+    "br_6x6_combined_hard": {
+      "target": 15,
+      "generated": 15,
+      "attempts": 15
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "all": {
+    "mean": 0.4331336059330388,
+    "count": 750
+  },
+  "dim/2x2": {
+    "mean": 0.5728513664316239,
+    "count": 195
+  },
+  "dim/2x5": {
+    "mean": 0.5744780297546898,
+    "count": 50
+  },
+  "dim/3x3": {
+    "mean": 0.47906606497310095,
+    "count": 195
+  },
+  "dim/3x5": {
+    "mean": 0.357578431372549,
+    "count": 25
+  },
+  "dim/4x2": {
+    "mean": 0.5375430645238095,
+    "count": 50
+  },
+  "dim/5x3": {
+    "mean": 0.6357276152,
+    "count": 25
+  },
+  "dim/5x5": {
+    "mean": 0.24104943984126984,
+    "count": 120
+  },
+  "dim/6x6": {
+    "mean": 0.1151851851851852,
+    "count": 90
+  },
+  "ood/asymmetric": {
+    "mean": 0.5362247058549245,
+    "count": 150
+  },
+  "ood/combined_hard": {
+    "mean": 0.11428571428571428,
+    "count": 70
+  },
+  "ood/large_matrix": {
+    "mean": 0.2235185674829932,
+    "count": 140
+  },
+  "ood/non_integer": {
+    "mean": 0.535715945351461,
+    "count": 120
+  },
+  "ood/novel_format_json": {
+    "mean": 0.5749784594444445,
+    "count": 60
+  },
+  "ood/novel_format_math": {
+    "mean": 0.6014448055555556,
+    "count": 60
+  },
+  "ood/novel_format_table": {
+    "mean": 0.47939153439153437,
+    "count": 30
+  },
+  "ood/wide_range": {
+    "mean": 0.4655903645833333,
+    "count": 120
+  },
+  "task/best_response": {
+    "mean": 0.5181512360115741,
+    "count": 360
+  },
+  "task/nash_equilibrium": {
+    "mean": 0.35465579355285237,
+    "count": 390
+  },
+  "model_path": "results/phase2/full_grpo_only/checkpoint-best/model",
+  "n_samples": 750,
+  "gen_time_s": 91.9,
+  "throughput": 8.2
+}

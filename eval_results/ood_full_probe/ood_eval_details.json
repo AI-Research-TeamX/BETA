@@ -1,0 +1,8252 @@
+[
+  {
+    "id": "ood_br_2x2_novel_format_math_d9fe85f434",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.69223,
+    "response_length": 701,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_6815b11fa0",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1055,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_fceac46215",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9340649999999999,
+    "response_length": 936,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_60f4c46813",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.971444,
+    "response_length": 1558,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_922d6d94a1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2978,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_d9b6c55a93",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1358,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_42ad6eb569",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5728800000000001,
+    "response_length": 1326,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_0986262701",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2895,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_d45fd5279d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2564,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_11c1ed10ee",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.7857142857142858,
+    "response_length": 2066,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_5dae913363",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2091,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_552ddc1114",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1710,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_d942ceba81",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1784,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_4163bfd84a",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.25,
+    "response_length": 1034,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_968455ae35",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1878,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_7f7a8508f1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2047,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_fc8fe5953e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2777,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_86320351b8",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.906366,
+    "response_length": 1402,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_34657d027c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2684,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_240bc96fee",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2957,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_0bbd24493b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2112,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_3570ed0a73",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2136,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_6e987e637e",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.9180045,
+    "response_length": 1092,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_d81cea06fb",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1520,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_c199445c20",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5909090909090908,
+    "response_length": 3133,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_b58f70f50f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2781,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_ee48a7d682",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 3012,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_4aa04489a6",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.26266447000000004,
+    "response_length": 1160,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_f31e71451f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2208,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_05b6f46d83",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2044,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_8b61083476",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2885,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_932bd6edf2",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.478443,
+    "response_length": 1938,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_2ad796d068",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.3810545,
+    "response_length": 1270,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_ed389be781",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.28689756,
+    "response_length": 1330,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_5e2b662d65",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.75,
+    "response_length": 3015,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_f3f05e4bed",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2148,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_5f7a625095",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2401,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_6c9b0fd3cc",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2280,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_6e155ce049",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 3072,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_9757bab2eb",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1851,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_cdb263f59f",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.48723706,
+    "response_length": 1623,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_741021d87d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2180,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_4d6cd208c7",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1077,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_0df9d80fdd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2896,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_2c3052b2bb",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 974,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_b9f05de842",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1632,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_5b31982f41",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.15,
+    "response_length": 2536,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_b86c0e571c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2490,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_e418dc6678",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1288,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_bf12a28718",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8294507600000001,
+    "response_length": 1274,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_a0455f34c2",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.999965,
+    "response_length": 931,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_537413ccc9",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.29285714285714287,
+    "response_length": 2187,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_477fb82da7",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.9373766000000001,
+    "response_length": 1812,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_c9866f3621",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2324,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_4c7d6ab2f4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1030,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_43d1c7dc67",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2072,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_ac55c33578",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1526,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_92dfe6cb46",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.15,
+    "response_length": 2247,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_bb71034e69",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2758,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_1217aa6b05",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9784487500000001,
+    "response_length": 1201,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_66a2c34085",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1367,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_d5c1345be3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 988,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_812a44cd86",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.65,
+    "response_length": 2891,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_b68f0b635a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2443,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_3aaf9d617d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 2429,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_e157d85155",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1964,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_edb7afb7ef",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3025,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_c4ceab09e3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2498,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_022d3d71e7",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1851,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_372313dd9c",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.007125999999999988,
+    "response_length": 999,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_d269e9b851",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2726,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_7e48d5ba14",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.9999985,
+    "response_length": 986,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_7c8ed7869a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 3118,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_470dc602f9",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2714,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_fd5927d28b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.75,
+    "response_length": 1980,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_abd99adcfd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.7,
+    "response_length": 2170,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_1167d72d1f",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.36856237000000003,
+    "response_length": 1398,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_fa92acf16b",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.4258625,
+    "response_length": 1298,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_c800727d3a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.6111111111111112,
+    "response_length": 2442,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_e522eae486",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2532,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_5e65ac6479",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.8935304000000001,
+    "response_length": 1623,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_2cea9b53a1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3035,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_ed5e87b1c0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2673,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_0fa5db7591",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1616,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_ff47beb398",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2691,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_9bb3829923",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.9604016,
+    "response_length": 1970,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_4129253e10",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.972988,
+    "response_length": 863,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_32c49f44e8",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3036,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_32e8eea7fd",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9512809999999999,
+    "response_length": 1303,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_1fe6230ccb",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.15,
+    "response_length": 2055,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_73876da961",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.65,
+    "response_length": 1757,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_05e80d5e52",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.99293,
+    "response_length": 1136,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_5fc8bc773e",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1015,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_fdffea3d73",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1429,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_2d8d984ac1",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9177053599999999,
+    "response_length": 1518,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_2494f05964",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9939384,
+    "response_length": 1381,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_8221add8f8",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9458589999999999,
+    "response_length": 1453,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_796098d63a",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.26604,
+    "response_length": 1320,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_43cfea8614",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1555,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_48b97bb975",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2797,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_d772fb9d1e",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2051,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_e20ed1a06b",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.9924925,
+    "response_length": 1274,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_d785eef451",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.44999,
+    "response_length": 1683,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_054b5f3df0",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.46343718,
+    "response_length": 930,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_23537d6e82",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1984,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_3a12705b17",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 798,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_e783884a90",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1928,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_a984f4d96c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2889,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_ef8f342cc0",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1672,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_9b562a5eed",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1486,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_e6cd1edfdd",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1023,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_b5a3c8d04e",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9217200000000001,
+    "response_length": 1349,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_2f89996171",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9999,
+    "response_length": 1391,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_b4e6bbf6bd",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.37847118,
+    "response_length": 964,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_32fc8a8f56",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 2495,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_7c1e177881",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1565,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_6f59b2ab03",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2750,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_cfb621d947",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1712,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_d3f4d75b6a",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.9472419999999999,
+    "response_length": 1575,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_df548c1cd4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2745,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_7b67f452d2",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8,
+    "response_length": 955,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_e902b75c3b",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.86076,
+    "response_length": 1302,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_b7988f6b92",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1047,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_8bc1947be9",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.4369388,
+    "response_length": 1848,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_f627d7edfd",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.98311,
+    "response_length": 1396,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_39f8fd6528",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1289,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_34cffe9fe6",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1458,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_90ad311e6f",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9423260800000001,
+    "response_length": 1408,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_cd19516110",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 943,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_724f4519e1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 3348,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_32b855f39c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2698,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_09c458f898",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2296,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_14563f2d53",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9997739200000001,
+    "response_length": 1237,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_3d4f32588e",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.4018043,
+    "response_length": 1279,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_38a5b32417",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1687,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_3836695469",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.999994,
+    "response_length": 1377,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_c153e7da3e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1757,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_f800b2c454",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1825,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_e8e32b33de",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1833,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_1dbb94ff81",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.4,
+    "response_length": 2325,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_1eec1faebd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2290,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_47474e1b47",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9200530000000001,
+    "response_length": 1330,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_10502851f6",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3349,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_c45bab5c44",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1894,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_13ab95e2fd",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.457871,
+    "response_length": 1295,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_d658676b57",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 2325,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_f75f5df4c0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2785,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_1d625eacf6",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.41692015,
+    "response_length": 915,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_b3bba1e28a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2476,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_02732ace1c",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.6307750000000001,
+    "response_length": 521,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_196c58a4c6",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.99485804,
+    "response_length": 1257,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_33e0a1e7f0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2906,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_f6951530d2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 2276,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_f9b090fefc",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1559,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_6a3e57741f",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.41998,
+    "response_length": 1308,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_765b319b28",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1507,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_d8d88f24da",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.46541200000000005,
+    "response_length": 1432,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_3b91fe1385",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.25,
+    "response_length": 1091,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_fffd6185b1",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.999997,
+    "response_length": 1089,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_05d01e7491",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.6666666666666667,
+    "response_length": 2378,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_6eda6081b4",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.508768,
+    "response_length": 1209,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_3bde08f858",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1373,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_41ca1ce3e4",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2056,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_5d11b00899",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1873,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_96be1ca455",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 2644,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_04a5b21c04",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2813,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_794dad7c53",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1881,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_cd5ab77260",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1743,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_202065c680",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.36500525,
+    "response_length": 1262,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_f63f29e559",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2591,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_b985cbd290",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2221,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_4bfb1b8940",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2058,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_63cab36ad4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1443,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_1db788ca35",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.6,
+    "response_length": 3051,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_63efd0f00d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1420,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_4dbbe6b10a",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.996985,
+    "response_length": 1145,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_be9d8eb6db",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.65,
+    "response_length": 1592,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_830737ddc3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2902,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_5dc7c7c3cb",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1984,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_bb24117afd",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.987174,
+    "response_length": 1084,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_33957dcab3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2196,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_121135b1b1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.15,
+    "response_length": 1689,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_34c1a5c804",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1583,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_6e4f58e4ba",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.960995,
+    "response_length": 1363,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_ce091dc631",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.7,
+    "response_length": 940,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_f63506cb19",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1797,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_f41f72e43c",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.57634575,
+    "response_length": 1593,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_aea0695439",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.968927,
+    "response_length": 1417,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_9589202e19",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.10988400000000004,
+    "response_length": 1375,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_0aae34838a",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9823132600000001,
+    "response_length": 1390,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_e65c5f163a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.7,
+    "response_length": 2943,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_c03aa8d22d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 2350,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_0c9fbf7bc5",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2734,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_89fe12e2e7",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.963241,
+    "response_length": 1366,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_4c984fe8d3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2574,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_13597d7fd3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1143,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_bfb60d1cc5",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1340,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_97a00fac77",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9306496,
+    "response_length": 1648,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_a8bec3bd29",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 2032,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_e64ee6c2b2",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.47685999999999995,
+    "response_length": 1492,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_38bf43a0ee",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.973584,
+    "response_length": 1264,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_81eacbd4aa",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.625,
+    "response_length": 2613,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_3afbed0c8a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.15,
+    "response_length": 2008,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_9094377377",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.35,
+    "response_length": 2001,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_7851fb201f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2673,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_a9bfc27ccb",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1796,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_451ef5801b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2497,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_3c2001026a",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1387,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_a311993916",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.15,
+    "response_length": 3049,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_063c2260e4",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1881,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_56bb915f16",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1335,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_50ea9fd9dc",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.41680399999999995,
+    "response_length": 1823,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_dd5dbecf2a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1896,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_4dab1a92db",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1609,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_feaf851126",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.99972905,
+    "response_length": 903,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_6f64057ac0",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5007788333333333,
+    "response_length": 1232,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_5b92987112",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.944839,
+    "response_length": 1265,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_c955a57629",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.4450776,
+    "response_length": 1798,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_9e3a3772e9",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2900,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_ee569be6f4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2547,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_45e50b8de8",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.987403355,
+    "response_length": 1290,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_a47a1a7373",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2197,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_edc37d47b5",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.37749265,
+    "response_length": 1453,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_108bfe8fa7",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1819,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_540eafe7c2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2941,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_006ebb4aaf",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.459068,
+    "response_length": 632,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_e75b8a8ba6",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 1469,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_691c3f8ac0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2083,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_e8b3019fdf",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.6428571428571428,
+    "response_length": 2327,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_d5e3a0e900",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 1845,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_3c17f54459",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2579,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_7c5aa1af28",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.75,
+    "response_length": 2785,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_bb6d255213",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2846,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_1688060ec0",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.44972,
+    "response_length": 1327,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_8a2589f3f1",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.922511,
+    "response_length": 1557,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_23eb55de48",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3015,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_a8c2fed716",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1601,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_e9d44f50da",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 1997,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_41150a1317",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2921,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_9c8d055bf1",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.04849700000000007,
+    "response_length": 1328,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_3a133b0841",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1283,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_01bc56c0d4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2146,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_4b634a3fd3",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1999,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_7916e3b702",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9065316,
+    "response_length": 1697,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_a326f2d9dc",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2797,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_d233f069f9",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2727,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_4f5f9ffcb7",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1096,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_500f558d8f",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.956189,
+    "response_length": 1277,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_ace346beb9",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 3139,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_eaca2ec4b5",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1527,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_302839cd28",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 1637,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_3af8c86073",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8109999999999999,
+    "response_length": 918,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_707b8745fd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2651,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_6ea37c5a17",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2900,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_e78cd00c31",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.3348234,
+    "response_length": 1522,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_374199560a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3143,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_90bee1f9f9",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1122,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_64ba100db0",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.797692,
+    "response_length": 855,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_306a5d15d2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3243,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_e2bcdfbd37",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3073,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_24fd0be954",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2580,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_f67bfeea96",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2732,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_9ccc35d684",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1765,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_a38f7414b3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.6111111111111112,
+    "response_length": 2364,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_2d7db43269",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.6,
+    "response_length": 2544,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_bacc9a552f",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.991571,
+    "response_length": 1590,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_310aaf3eba",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1606,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_285e06ead7",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1712,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_a7f7f0d48b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2563,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_695f07bda2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1671,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_559aac12a9",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.57217582,
+    "response_length": 601,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_b2363805f3",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 961,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_b92bb4fb8c",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5553980000000001,
+    "response_length": 622,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_b19e8c8159",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1096,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_bf1b82917d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 3028,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_2c515e537a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 1865,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_e4c149387d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1449,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_1780150cb3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2361,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_c48c7e01fd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.6428571428571428,
+    "response_length": 2073,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_9da4d62981",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.4247498,
+    "response_length": 1821,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_d35566c5c0",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.971185,
+    "response_length": 1279,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_a75fac1d3e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1643,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_1fb398617b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3065,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_fc6eeab5bd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2878,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_995bf4d795",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2380,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_241a96293d",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.7163355,
+    "response_length": 697,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_51eaa45a25",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.15,
+    "response_length": 1700,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_b0ba7d0756",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.998902,
+    "response_length": 849,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_35942d14f6",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1843,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_dbfbab6b09",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2888,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_3766a42985",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2433,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_f27ad1f84f",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1868,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_4a024401e3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2078,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_db81a9f8cb",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.6111111111111112,
+    "response_length": 2526,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_6c1644a5c8",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.75,
+    "response_length": 1895,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_93d2b9ad8a",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1902,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_2f79267176",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1986,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_25708e6237",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.45921538,
+    "response_length": 1718,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_006bf795e2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 3071,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_8950ee2f5f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2284,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_eea830d0c6",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.777668,
+    "response_length": 1576,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_14cff90079",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2813,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_6993627e57",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1977,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_8c33a04a7d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 2022,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_fdff5555e5",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.965989345,
+    "response_length": 1147,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_0358b2f3e4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 1333,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_32aae8b417",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1999,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_70098202e0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.75,
+    "response_length": 1871,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_b6b4ad07f5",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9995215,
+    "response_length": 1301,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_4ba93d1a0f",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1735,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_d62b6fb6d5",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.4377054,
+    "response_length": 2070,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_f39022eb50",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3302,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_7126b0644c",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.904585,
+    "response_length": 1395,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_8bc0280d0b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2376,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_58d3ebf2ac",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1631,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_0ab0858f74",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2857,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_2aef8d2844",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2274,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_4435d5138b",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.3830775,
+    "response_length": 963,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_89598e65ef",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1728,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_bdd1a10d7e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1966,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_419ea7f32e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1580,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_70932ee885",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2310,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_47de1cd7e2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2504,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_19987dddbe",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.46400199999999997,
+    "response_length": 1387,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_b5d487b4c9",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.998094,
+    "response_length": 1462,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_6df9ab1ae3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 1503,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_3da758e84a",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.4557244,
+    "response_length": 1873,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_99dbe191c7",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.847,
+    "response_length": 1477,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_fb9d3e713f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 2473,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_a30fae429b",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.430211,
+    "response_length": 1359,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_446c501501",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2712,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_7f97a7f509",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1829,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_67afa72c94",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.4583642,
+    "response_length": 1946,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_cfa74a58d6",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.46665200000000007,
+    "response_length": 1172,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_4e7e346dea",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9999975999999999,
+    "response_length": 1649,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_fe07262194",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5579160000000001,
+    "response_length": 1537,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_4e34253edc",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1332,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_377fd27a69",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9998228600000001,
+    "response_length": 945,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_9f1b1ea78f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2035,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_4cd835fa24",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.823016,
+    "response_length": 1035,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_58c1389012",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.4502768,
+    "response_length": 1984,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_670c305f0a",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1855,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_cb17eaf314",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.39541699999999996,
+    "response_length": 594,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_8c1d553345",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2318,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_8879f1d1a3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2681,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_e3e481f5e6",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.42682600000000004,
+    "response_length": 1183,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_9fc4db2100",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 3079,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_544cd61d48",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.4184025,
+    "response_length": 1322,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_30055df2cb",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2881,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_cfad10068f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.75,
+    "response_length": 1792,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_91862a92de",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9661059999999999,
+    "response_length": 1224,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_a1efe66cd3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3002,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_e967da9c70",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2959,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_5d33ab26dd",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.42315519999999995,
+    "response_length": 1681,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_7caa9d1060",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.98986417,
+    "response_length": 1551,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_07f17c60d5",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1629,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_327965c78a",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9977499999999999,
+    "response_length": 926,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_44b192aff3",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5559339999999999,
+    "response_length": 1393,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_bc308b733c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 2470,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_db0aba86ab",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.4373272,
+    "response_length": 1955,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_e419b225b5",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1922,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_a9e49ac5ec",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2955,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_d39241de46",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1475,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_2347c48df9",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1985,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_eb5c6bbf93",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.415195,
+    "response_length": 1155,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_7d4b2e4f35",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.46299,
+    "response_length": 1945,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_f407fc1471",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2664,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_4fa495bd15",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3241,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_fa04a8e12f",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1641,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_a6991b5fc7",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 2574,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_ce5b5d93be",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2842,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_5b9c5fd748",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8,
+    "response_length": 774,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_5f43fdd8c1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.15,
+    "response_length": 2883,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_a5a9e7e06a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 1688,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_fc0d2dabd2",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.7977799999999999,
+    "response_length": 793,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_1449a26b89",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 3091,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_541c9965bc",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 1273,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_d88dff9be0",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1009,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_9d9fecd266",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2703,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_6298d5937e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2480,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_08a7bb8ab4",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.015764,
+    "response_length": 1678,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_6609e78a7c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1318,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_2d7fde7ee2",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.6743195,
+    "response_length": 1453,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_48edb2aba0",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 1.0,
+    "response_length": 1282,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_6af1e5ae40",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1191,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_fcad61aba4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.15,
+    "response_length": 2740,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_a35d5da8d0",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1811,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_583966527f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2970,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_7f3e61a2da",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2515,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_d31307860e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 3786,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_8c1fd4856e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.15,
+    "response_length": 3046,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_807f86302f",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.4923366,
+    "response_length": 1610,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_6726886d3a",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8,
+    "response_length": 1074,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_22c4ec45f2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2413,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_ecc930d9ec",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2584,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_460046e924",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2355,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_0a0d808249",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2614,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_205654860b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.75,
+    "response_length": 2365,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_7f1a15f349",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 3265,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_9dc201deea",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2416,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_4bbb66e87a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2029,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_884459c728",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1650,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_e099a9db1b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3200,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_607b3199b7",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2669,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_b85fbc3cfd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1308,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_875842ceab",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1018,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_17273c5051",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 822,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_4d9b2faed6",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.9964999999999999,
+    "response_length": 1148,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_bb0863dd71",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.441561,
+    "response_length": 699,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_bdc5229069",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 989,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_34970d8cd1",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1902,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_ffc504543c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.15,
+    "response_length": 1670,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_e8c61151ea",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.13928800000000005,
+    "response_length": 1375,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_3c6de1d402",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 975,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_11e177651c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 1829,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_35d62eedd3",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1816,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_53be7a0bdf",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2657,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_d8b276ec05",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1204,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_8e3c845e4c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2293,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_161cf8a9c6",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2669,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_190247542c",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 873,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_d072b65c1f",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9642747999999999,
+    "response_length": 1662,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_8b89045754",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.969964,
+    "response_length": 1391,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_58b44125c6",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2693,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_67b0f50aa0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2672,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_f0a357a71e",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 1.0,
+    "response_length": 1440,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_20a7dd7ec9",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2233,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_762a65151e",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1960,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_643392d4cb",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.35,
+    "response_length": 1563,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_d0ede17295",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2692,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_20c5b8d01c",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.99974677,
+    "response_length": 1220,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_ea7ab5ed25",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1899,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_af729d02d6",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.7993399999999999,
+    "response_length": 805,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_5c37683006",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1994,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_99eee26db7",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.35,
+    "response_length": 2283,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_347c5ca940",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 3195,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_23f2055719",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1936,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_7090dc303f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3292,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_cecf70ce37",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 1937,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_67e837cb51",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1589,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_7d896b9d10",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2867,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_f79744fc42",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2246,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_65e2f313a8",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.9684902499999999,
+    "response_length": 1159,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_84c52f6c63",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2654,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_8f054dc515",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.38755399999999995,
+    "response_length": 1251,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_d07f800ea5",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.83560563,
+    "response_length": 1162,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_e5c9da94ba",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3025,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_d5360e75cc",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9662419999999999,
+    "response_length": 1191,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_e03bf0af27",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2889,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_65b0726a32",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1604,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_1324d6e604",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1764,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_2cdeb5930d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2036,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_e63c87703b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1371,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_a033706c60",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.156446,
+    "response_length": 1604,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_5c4646cd80",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1593,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_bdb55ea375",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.15,
+    "response_length": 2701,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_2f61872079",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.43114399999999997,
+    "response_length": 1432,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_2c212bf462",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1246,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_fdb324f30e",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2043,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_ddf223586f",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1819,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_153260d72a",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9785207699999999,
+    "response_length": 1551,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_d134bc5540",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 1622,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_40be6f244d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2380,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_5ab585653a",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.4113192,
+    "response_length": 1893,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_bf9e669559",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1628,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_3bda8b0233",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.6988,
+    "response_length": 1627,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_8c7a8dadc0",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.13734000000000002,
+    "response_length": 1297,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_20372bec42",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9908950000000001,
+    "response_length": 1317,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_39fcf9ebed",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.783311,
+    "response_length": 1533,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_625b334ded",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.36293757,
+    "response_length": 1482,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_b55e8ea13a",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1181,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_bcc5e27cc3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3169,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_44392a848a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 3193,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_3904ce8bca",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2685,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_19a0080a57",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2453,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_0b58f34e6b",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.9051790000000001,
+    "response_length": 1316,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_d07766b7e7",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.4240532,
+    "response_length": 1718,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_da4bedbb4c",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 780,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_83107f2d6c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2885,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_36498100b8",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.6666666666666667,
+    "response_length": 2975,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_f02134c56b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2805,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_73332a496e",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.9469774000000001,
+    "response_length": 1300,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_4a6e2b9c89",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2602,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_88307ca6ef",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2067,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_7034851db9",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.25,
+    "response_length": 1185,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_c7c50398f1",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1886,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_61b28589ee",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1819,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_91172c72c0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2513,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_2bcf063c1f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.75,
+    "response_length": 2982,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_f5bfbb69f9",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 873,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_98c99a513a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 2682,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_b56a93a9a5",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1722,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_61ced53ba3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2759,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_01e87ce9f9",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9717781999999999,
+    "response_length": 1504,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_bb9d3bd3bc",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 935,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_8a8bec0ce1",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 967,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_5c2935e675",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1896,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_67fcd67f2e",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 992,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_deb5dfa3b9",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 836,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_34cefc9b60",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9725779999999999,
+    "response_length": 1294,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_7e856d2ab9",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 1861,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_cd414fa892",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.25,
+    "response_length": 1051,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_6e79e7bf1f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2546,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_2c8f249c46",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1184,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_945b53cf33",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1120,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_9e2a0d84ed",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.6428571428571428,
+    "response_length": 3154,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_a8a63c59d3",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9869704800000001,
+    "response_length": 1612,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_9993d2b026",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.4811875,
+    "response_length": 1160,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_6a6a860ddc",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.41999925000000005,
+    "response_length": 1143,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_225c18774d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2795,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_5e24a1eb55",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2477,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_c751e5361c",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1856,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_d4f92664c8",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.428098,
+    "response_length": 1308,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_1041fa81b4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2040,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_191f8857ac",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.94035017,
+    "response_length": 1586,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_d8d3944a21",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1780,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_3a41e0f6d6",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.44022649999999997,
+    "response_length": 590,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_e9845530a8",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 3438,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_3976c3c77a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2215,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_b9a3622e38",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1941,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_6221822f5d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2202,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_199a52c05e",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.725,
+    "response_length": 1069,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_ca22493647",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2154,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_ebc533dee0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2483,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_a4cb831d2a",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1315,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_aeefc27164",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2609,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_3fe0c5b821",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 1589,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_bf6b17170e",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1785,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_6490b1561a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.6666666666666667,
+    "response_length": 1981,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_f7e04d311f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 2189,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_e355a82a19",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 3121,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_0fa5495c11",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9272115599999999,
+    "response_length": 1341,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_3e23e17d9f",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 887,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_6b26b01c84",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1872,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_d5f8844e24",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.97180086,
+    "response_length": 1365,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_e32c3adefb",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2107,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_ab6e06a864",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1381,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_26ef1b1c4f",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.94195933,
+    "response_length": 1533,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_acc8e63dc8",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.39224099999999995,
+    "response_length": 1623,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_e2e79f5df1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1410,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_fd6ecf3bff",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 889,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_54fd58642d",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.8791915000000001,
+    "response_length": 1311,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_7c1693068a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2858,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_c43cf204c6",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1097,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_3af42e6b28",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 2719,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_58eee03ea7",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2061,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_0e01f7fc4d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3112,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_a9ac9953b6",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1868,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_6f272ddf85",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9934337,
+    "response_length": 1465,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_1055d22cf3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2862,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_3c0a6b5c22",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 808,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_628edfa05a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 1394,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_6f67b6bda4",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9968122,
+    "response_length": 1449,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_e7bc4da028",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9996407999999999,
+    "response_length": 1687,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_42951339db",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1728,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_69e766387f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.275,
+    "response_length": 3025,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_9c07682ee4",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.964364,
+    "response_length": 1315,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_27ba17d037",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1997,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_eea4a1fe97",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.55,
+    "response_length": 2791,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_e8ea79cbdc",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.468602,
+    "response_length": 1374,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_ae5ce6dae2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2392,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_6e7ed690ca",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.444217665,
+    "response_length": 1196,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_eb62833bdf",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.5625,
+    "response_length": 2961,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_b64ce2d0bc",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.9639255,
+    "response_length": 1271,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_15b1afc50a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2597,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_4e3f8b76c3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.6428571428571428,
+    "response_length": 1868,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_241bf53260",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.667646,
+    "response_length": 1920,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_856bb354fa",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1600,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_7fe0a0cc04",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2529,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_93ccc9f262",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.931587,
+    "response_length": 1355,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_57d5ba9657",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1920,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_be69e9a1ba",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1764,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_88ff5b68a0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1935,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_092e69a557",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1914,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_math_626c49f28d",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.399318,
+    "response_length": 1410,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_6433e29073",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2023,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_ea8e8009a1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2191,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_3b8d0c4a94",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.41115801,
+    "response_length": 1448,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_537470f371",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.15,
+    "response_length": 2981,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_f9f6de9688",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.94547039,
+    "response_length": 1525,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_addeb8cec6",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2679,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_c0a5f5251a",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1409,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_60fdb6425f",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.9671905000000001,
+    "response_length": 1349,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_171f3653a4",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2768,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_601cf02fa2",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9376800000000001,
+    "response_length": 885,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_b8de7d7b0e",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1088,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_fd82591697",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.15,
+    "response_length": 2371,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_fb15e5231d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.7,
+    "response_length": 2228,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_23213114fd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2714,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_374f6fd25d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.65,
+    "response_length": 2141,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_26448a24fa",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 2369,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_004a04a5bd",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1624,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_4a881d5fa2",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1768,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_345f7dc538",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2865,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_ec80835ee1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2468,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_3d7a91878d",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1911,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_602dccf534",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.971035,
+    "response_length": 1144,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_e8d8bcd40b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1935,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_3d1f9dbbda",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.37767799999999996,
+    "response_length": 776,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_c186ed8f79",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.976269,
+    "response_length": 1188,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_194686cc49",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2423,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_dbcac7f22d",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9851404799999999,
+    "response_length": 1379,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_25b15a2027",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2526,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_table_d34cf71703",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 2121,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_37c690c0d0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2011,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_0436f1c211",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 950,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_8c6f4329c9",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1806,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_6cd72be64b",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9723552000000001,
+    "response_length": 1601,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_2b97011675",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2385,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_4098ed516a",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1838,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_60ee136905",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2643,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_7ede6274ed",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2171,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_356db2cecf",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9862972799999999,
+    "response_length": 1497,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_337514b7b2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2900,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_b387cf8d2d",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.44287,
+    "response_length": 1045,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_4ca66da721",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.3704105,
+    "response_length": 1107,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_17cae908e5",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1996,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_1927ea71c5",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8333333333333333,
+    "response_length": 1710,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_3f0d72ce35",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2745,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_7308aacd78",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.2956555,
+    "response_length": 1026,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_ec970b393b",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1760,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_ecea14c336",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1658,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_f07524f09c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 2273,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_7bd62f555c",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1876,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_3f1033f4d6",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 2298,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_7e60a17076",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.190444,
+    "response_length": 1730,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_90151a831c",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.39649999999999996,
+    "response_length": 1026,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_f3b402bfe5",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.439542,
+    "response_length": 1268,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_83167ce784",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1844,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_6e37182bd8",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.9585952,
+    "response_length": 1361,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_7c70bdd3ac",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2342,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_fb0ae0ae1c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3312,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_56eb1e6c80",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1418,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_29da91a948",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 3004,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_89b7d694cd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2125,
+    "response_length": 2776,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_b3da5cd86a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 1688,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_a6f2c235cd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 3107,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_ee5e7ccdc7",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2026,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_898b43dd99",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9884602,
+    "response_length": 1503,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_1399ab250b",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 981,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_234ce2bfe9",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.65,
+    "response_length": 1481,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_c2b0c0cb3e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2188,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_1cbd4185e7",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.75,
+    "response_length": 2459,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_math_196ff4077a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 3120,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_json_3f71ebf5ea",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9702804999999999,
+    "response_length": 1064,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_0b0f17355e",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.36245859999999996,
+    "response_length": 1149,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_f1aaa0e50e",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9951800000000001,
+    "response_length": 1290,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_485534bc93",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2710,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_bb603d4227",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.25,
+    "response_length": 1041,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_ea6d9e309a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2941,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_4682b16f2b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2810,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_json_caa3f37aab",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 2174,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_3c15209841",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9877699999999999,
+    "response_length": 1021,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_383df7301a",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1193,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_96f651d9d4",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.41028296,
+    "response_length": 1597,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_a1e31b53a2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2765,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_2e6d78dae6",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.25,
+    "response_length": 1043,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_9ae7fd0332",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8874677599999999,
+    "response_length": 1237,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_b3a64f0bb5",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.6666666666666667,
+    "response_length": 2364,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_9a1306bb8d",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.97358,
+    "response_length": 1714,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_0807f697b2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2456,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_20c3b0c991",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1402,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_580a27c483",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.9652449999999999,
+    "response_length": 1006,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_7ce762ad7b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1373,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_7f34ae184d",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 753,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_baf65d74c8",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2732,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_5f14de6a39",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2826,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_d88fb09e67",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2042,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_553a4f3a8e",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.441778,
+    "response_length": 1522,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_e4ec717af0",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.4778536,
+    "response_length": 1848,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_3331159705",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.988942,
+    "response_length": 1424,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_ec846b8369",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 1.0,
+    "response_length": 1632,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_395fbe26fa",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.99956035,
+    "response_length": 1236,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_4899c14516",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1339,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_979ce1e9c3",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.8152999999999999,
+    "response_length": 1555,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_1212d78a15",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2097,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_e4553a5a8e",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.996306,
+    "response_length": 1348,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_f0e56fc47f",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.9695775,
+    "response_length": 1286,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_5e42980e4d",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 2601,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_df6a34517b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 2137,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_4f64c3047b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 1206,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_43215087f9",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.9436722000000001,
+    "response_length": 1908,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_5c9ab85e45",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1933,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_e27b873579",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1828,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_641b070087",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 2166,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_1556bbf098",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9997264,
+    "response_length": 1530,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_fd342bd6d5",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.698,
+    "response_length": 1384,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_2ff05f5b50",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.15,
+    "response_length": 2658,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_c7b3c598ea",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1839,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_non_integer_f48c73cbb6",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2438,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_72fe3ac438",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2698,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_212f419f2b",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.7836939999999999,
+    "response_length": 1150,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_9b45cf6270",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.987809,
+    "response_length": 1272,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_f17b292e7d",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.947041,
+    "response_length": 1063,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_wide_range_8cb852b00c",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1690,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_af9e8cc10e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 2818,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_e5cf39516f",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1795,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_a85e271115",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2624,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_3d76d23a75",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1791,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_4x2_asymmetric_0c02d99a96",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1743,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_novel_format_math_29493aed3a",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.34563,
+    "response_length": 967,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_nash_6x6_large_matrix_947936aeaf",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.2,
+    "response_length": 2510,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_7c7e5f21a2",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.2,
+    "response_length": 2872,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_fa8f223661",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.9983214999999999,
+    "response_length": 1362,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_7bdb85a190",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.0,
+    "response_length": 1208,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_3x3_wide_range_199870efef",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.06054000000000002,
+    "response_length": 1244,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_0229952950",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.4324056,
+    "response_length": 1378,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_novel_format_math_fea8b872e0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.65,
+    "response_length": 1658,
+    "ood_category": "novel_format_math"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_b0489a4866",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.5,
+    "response_length": 1890,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_cbeac3008d",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 966,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_8151ba0c94",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 912,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_de09196943",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.98128296,
+    "response_length": 1241,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_a4270abce0",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1430,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_02da26fa49",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1933,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_2x2_wide_range_882d34137a",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.25,
+    "response_length": 1023,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_d9b272bbbf",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 860,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_6x6_combined_hard_08aae100b7",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.5,
+    "response_length": 1550,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_ad21b867fd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1767,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_b9eccef701",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1570,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_326b768293",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.0,
+    "response_length": 1560,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_89d84017cb",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.6176470588235294,
+    "response_length": 2845,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_table_8b02e97b10",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 1801,
+    "ood_category": "novel_format_table"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_97e3ec178f",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.8540766200000001,
+    "response_length": 1227,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_5d869c00e3",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.5,
+    "response_length": 2830,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_6x6_combined_hard_e077b6eb3e",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1174,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_combined_hard_69abd5d31a",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1892,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x3_asymmetric_4fd0a73c54",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      3
+    ],
+    "reward": 0.4480498,
+    "response_length": 1395,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_388fe1229c",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.99936505,
+    "response_length": 1297,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_8fe1d89c41",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2596,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_61b5c2f780",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2635,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_4x2_asymmetric_f68897ccba",
+    "task": "best_response",
+    "dimensions": [
+      4,
+      2
+    ],
+    "reward": 0.38926649999999996,
+    "response_length": 1174,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_3x3_novel_format_json_4a0905d264",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.9989999999999999,
+    "response_length": 1534,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_9b75fe65a7",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.41311578,
+    "response_length": 1627,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_174245a883",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.38434312000000004,
+    "response_length": 744,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_c0292305d0",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1944,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_5db1091674",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2957,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_acd380fccd",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2672,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_3x3_novel_format_json_1ebc0b472f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.2,
+    "response_length": 3149,
+    "ood_category": "novel_format_json"
+  },
+  {
+    "id": "ood_nash_3x5_asymmetric_9f99e8131f",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      3,
+      5
+    ],
+    "reward": 0.65,
+    "response_length": 2638,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_22c46ec15c",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 1872,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x5_asymmetric_6ccc249c6a",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 3276,
+    "ood_category": "asymmetric"
+  },
+  {
+    "id": "ood_nash_5x5_combined_hard_19d09826b7",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.2,
+    "response_length": 2035,
+    "ood_category": "combined_hard"
+  },
+  {
+    "id": "ood_br_5x5_large_matrix_5c53772ee1",
+    "task": "best_response",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 2019,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_nash_2x2_non_integer_564597c1b1",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 1235,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_2x2_non_integer_8240e5b5e3",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.4363251,
+    "response_length": 709,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_br_3x3_non_integer_97192d691f",
+    "task": "best_response",
+    "dimensions": [
+      3,
+      3
+    ],
+    "reward": 0.43903599,
+    "response_length": 1340,
+    "ood_category": "non_integer"
+  },
+  {
+    "id": "ood_nash_2x2_wide_range_2173892d0b",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      2,
+      2
+    ],
+    "reward": 0.5,
+    "response_length": 2321,
+    "ood_category": "wide_range"
+  },
+  {
+    "id": "ood_nash_5x5_large_matrix_20d38b093e",
+    "task": "nash_equilibrium",
+    "dimensions": [
+      5,
+      5
+    ],
+    "reward": 0.0,
+    "response_length": 3177,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_6x6_large_matrix_354c6b4876",
+    "task": "best_response",
+    "dimensions": [
+      6,
+      6
+    ],
+    "reward": 0.0,
+    "response_length": 1756,
+    "ood_category": "large_matrix"
+  },
+  {
+    "id": "ood_br_2x5_asymmetric_c23b98fcae",
+    "task": "best_response",
+    "dimensions": [
+      2,
+      5
+    ],
+    "reward": 0.399599,
+    "response_length": 1188,
+    "ood_category": "asymmetric"
+  }
+]

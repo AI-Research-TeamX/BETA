@@ -1,0 +1,82 @@
+{
+  "all": {
+    "mean": 0.433099075684997,
+    "count": 750
+  },
+  "dim/2x2": {
+    "mean": 0.5853274621495727,
+    "count": 195
+  },
+  "dim/2x5": {
+    "mean": 0.5798773987157287,
+    "count": 50
+  },
+  "dim/3x3": {
+    "mean": 0.4852342041089281,
+    "count": 195
+  },
+  "dim/3x5": {
+    "mean": 0.3232058823529412,
+    "count": 25
+  },
+  "dim/4x2": {
+    "mean": 0.5269719007142857,
+    "count": 50
+  },
+  "dim/5x3": {
+    "mean": 0.70602632,
+    "count": 25
+  },
+  "dim/5x5": {
+    "mean": 0.1897209317751323,
+    "count": 120
+  },
+  "dim/6x6": {
+    "mean": 0.13583333333333333,
+    "count": 90
+  },
+  "ood/asymmetric": {
+    "mean": 0.5404884668688283,
+    "count": 150
+  },
+  "ood/combined_hard": {
+    "mean": 0.11989795918367346,
+    "count": 70
+  },
+  "ood/large_matrix": {
+    "mean": 0.18999039050113378,
+    "count": 140
+  },
+  "ood/non_integer": {
+    "mean": 0.5415306112733586,
+    "count": 120
+  },
+  "ood/novel_format_json": {
+    "mean": 0.6103212083333334,
+    "count": 60
+  },
+  "ood/novel_format_math": {
+    "mean": 0.5985453311111111,
+    "count": 60
+  },
+  "ood/novel_format_table": {
+    "mean": 0.5164309764309764,
+    "count": 30
+  },
+  "ood/wide_range": {
+    "mean": 0.4645910825667388,
+    "count": 120
+  },
+  "task/best_response": {
+    "mean": 0.48042148739583335,
+    "count": 360
+  },
+  "task/nash_equilibrium": {
+    "mean": 0.3894168494903789,
+    "count": 390
+  },
+  "model_path": "./Qwen/Qwen2.5-3B-Instruct",
+  "n_samples": 750,
+  "gen_time_s": 93.4,
+  "throughput": 8.0
+}
