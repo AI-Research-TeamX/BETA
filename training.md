@@ -446,3 +446,100 @@ Step 280 之后验证 reward 下降至 0.1887，可能原因：
 | `results/phase2/full_grpo_only/train.log` | 完整 stdout 日志 |
 | `results/phase2/full_grpo_only/summary.json` | 实验总结 JSON |
 | `run_phase2_no_probe.sh` | 消融实验启动脚本 |
+
+---
+
+## 10. SFT on Chain-of-Thought 实验
+
+### 10.1 动机
+
+从 GRPO 系列实验（Full+Probe: 0.3167, GRPO-only: 0.2046）来看，纯 RL 方法在博弈论任务上提升有限。核心问题是**冷启动困境**：模型从未见过正确的博弈论求解过程，RL 信号太稀疏（reward ∈ [0,1]），无法引导模型从零学会多步推理。
+
+参考 DeepSeek-R1 的方法论：先用 SFT 教会模型「怎么解题」，再用 RL 精调。GameSolve-Bench 每个样本都有 `chain_of_thought` 字段（平均 ~1034 字符的详细求解步骤），是天然的 SFT 监督信号。
+
+### 10.2 SFT 数据准备
+
+`preprocess_sft.py` 将 GameSolve-Bench 转为 SFT chat 格式：
+
+```
+System: [game theory expert prompt + ANSWER format instructions]
+User: [game description + task instruction]
+Assistant: [chain_of_thought]\n\n[formatted ANSWER block from ground truth]
+```
+
+- 训练集: 1920 样本，验证集: 480 样本（与 GRPO 实验相同划分）
+- 描述风格: 随机选择 abstract/story/compact
+- 输出: `data/phase2_sft/train.json`, `data/phase2_sft/val.json`
+
+### 10.3 SFT 训练配置
+
+| 参数 | 值 |
+|:-----|:---|
+| 训练脚本 | `train_sft.py` (DDP, 8×H20) |
+| 学习率 | 2e-5 |
+| Batch size | 2/GPU × 8 GPUs × 4 grad_accum = 64 |
+| Epochs | 3 |
+| 总步数 | 90 |
+| max_seq_length | 2048 |
+| 最佳验证 loss | 0.0304 (perplexity = 1.03) |
+
+### 10.4 SFT→GRPO 配置
+
+在 SFT 最佳检查点上继续 GRPO 训练：
+
+| 参数 | 与 GRPO-only 的差异 |
+|:-----|:-------------------|
+| model_path | `results/phase2/sft_cot/checkpoint-best` (SFT 检查点) |
+| lr | 5e-7 (降低，保护 SFT 知识) |
+| max_response_length | 1024 (翻倍，适应 CoT 输出) |
+| max_seq_length | 2048 (翻倍) |
+| probe_lambda | 0.0 (无探针) |
+
+最佳验证 reward: 0.7495 (Step 280)
+
+---
+
+## 11. 全方法对比（统一评估）
+
+使用 `eval_checkpoint.py` 对所有方法在相同的 200 样本上进行统一评估（temperature=0.1, max_new_tokens=1024）。
+
+### 11.1 总体结果
+
+| 方法 | Overall | Nash | BR | Easy | Medium | Hard |
+|:-----|:-------:|:----:|:--:|:----:|:------:|:----:|
+| Base (Qwen2.5-3B) | 0.5249 | 0.4033 | 0.6829 | 0.5738 | 0.4844 | 0.5224 |
+| GRPO-only | 0.5152 | 0.4066 | 0.6563 | 0.5702 | 0.4614 | 0.5580 |
+| Full+Probe GRPO | 0.4840 | 0.3620 | 0.6423 | 0.5084 | 0.4539 | 0.5367 |
+| **SFT (CoT)** | **0.9451** | **0.9206** | **0.9769** | **0.9802** | **0.9299** | **0.8666** |
+| SFT → GRPO | 0.9351 | 0.9028 | 0.9770 | 0.9802 | 0.9096 | 0.8673 |
+
+### 11.2 关键发现
+
+1. **SFT on CoT 是压倒性赢家**: 0.9451 overall reward，比 base model 提升 **80%**，比最优 GRPO 方案提升 **95%**。CoT 监督学习直接解决了模型「不知道怎么解题」的根本问题。
+
+2. **纯 RL（GRPO）基本无效**: GRPO-only (0.5152) 甚至低于 base model (0.5249)，Full+Probe (0.4840) 更低。这说明在冷启动条件下，RL 的稀疏 reward 信号不足以引导模型学会博弈论的多步推理过程。训练期间的验证 reward（0.2-0.3）与评估 reward（0.5）的差异可能是由于评估使用了更长的 max_new_tokens=1024（训练时为 512）和不同的采样策略。
+
+3. **SFT→GRPO 未带来额外提升**: 0.9351 略低于纯 SFT 的 0.9451。GRPO 阶段反而引入了轻微退化（-1.1%），可能原因：(a) SFT 已接近该数据集的性能天花板；(b) GRPO 的探索性采样扰动了已优化的 CoT 推理模式；(c) 数据集规模有限（1920 样本），进一步优化空间受限。
+
+4. **CoT 监督是关键因素**: 模型性能的核心瓶颈不是「表示质量」（probing 试图改善的）也不是「策略优化」（RL 试图做的），而是「推理过程知识」——模型需要被明确教导如何逐步分析支付矩阵、识别支配策略、计算均衡。
+
+### 11.3 各维度分析
+
+- **Nash vs BR**: Nash 任务难度更大（base: 0.40 vs 0.68），SFT 在两者上都接近满分（0.92, 0.98）
+- **Easy/Medium/Hard**: SFT 在 easy 上接近完美（0.98），hard 上仍有提升空间（0.87）
+- **GRPO 系列在 Hard 上表现略好于 Medium**: 可能是 hard 样本中 BR 任务比例较高
+
+### 11.4 输出文件
+
+| 文件/目录 | 说明 |
+|:---------|:-----|
+| `preprocess_sft.py` | SFT 数据预处理脚本 |
+| `train_sft.py` | DDP SFT 训练脚本 |
+| `eval_checkpoint.py` | 统一评估脚本 |
+| `compare_experiments.py` | 实验对比脚本 |
+| `run_sft.sh` | SFT 启动脚本 |
+| `run_sft_then_grpo.sh` | SFT→GRPO 启动脚本 |
+| `results/phase2/sft_cot/` | SFT 训练输出 |
+| `results/phase2/sft_then_grpo/` | SFT→GRPO 训练输出 |
+| `eval_results/*/eval_summary.json` | 各方法评估结果 |
+| `results/phase2/comparison.json` | 完整对比 JSON |

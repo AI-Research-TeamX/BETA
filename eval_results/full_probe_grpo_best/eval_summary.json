@@ -1,0 +1,28 @@
+{
+  "all": {
+    "mean": 0.48396255004761907,
+    "count": 200
+  },
+  "diff/easy": {
+    "mean": 0.5083973012048193,
+    "count": 83
+  },
+  "diff/hard": {
+    "mean": 0.5367083055555555,
+    "count": 18
+  },
+  "diff/medium": {
+    "mean": 0.4538867122174122,
+    "count": 99
+  },
+  "task/best_response": {
+    "mean": 0.6423331747126436,
+    "count": 87
+  },
+  "task/nash_equilibrium": {
+    "mean": 0.36203118415507796,
+    "count": 113
+  },
+  "model_path": "results/phase2/full_probe_grpo/checkpoint-best/model",
+  "n_samples": 200
+}

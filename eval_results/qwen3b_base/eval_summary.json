@@ -1,0 +1,28 @@
+{
+  "all": {
+    "mean": 0.5249320021111111,
+    "count": 200
+  },
+  "diff/easy": {
+    "mean": 0.5737800883534137,
+    "count": 83
+  },
+  "diff/hard": {
+    "mean": 0.5223942500000001,
+    "count": 18
+  },
+  "diff/medium": {
+    "mean": 0.4844399655443322,
+    "count": 99
+  },
+  "task/best_response": {
+    "mean": 0.6829215885057471,
+    "count": 87
+  },
+  "task/nash_equilibrium": {
+    "mean": 0.40329400196656834,
+    "count": 113
+  },
+  "model_path": "./Qwen/Qwen2.5-3B-Instruct",
+  "n_samples": 200
+}

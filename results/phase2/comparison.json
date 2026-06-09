@@ -1,0 +1,142 @@
+{
+  "Base (Qwen2.5-3B)": {
+    "all": {
+      "mean": 0.5249320021111111,
+      "count": 200
+    },
+    "diff/easy": {
+      "mean": 0.5737800883534137,
+      "count": 83
+    },
+    "diff/hard": {
+      "mean": 0.5223942500000001,
+      "count": 18
+    },
+    "diff/medium": {
+      "mean": 0.4844399655443322,
+      "count": 99
+    },
+    "task/best_response": {
+      "mean": 0.6829215885057471,
+      "count": 87
+    },
+    "task/nash_equilibrium": {
+      "mean": 0.40329400196656834,
+      "count": 113
+    },
+    "model_path": "./Qwen/Qwen2.5-3B-Instruct",
+    "n_samples": 200
+  },
+  "GRPO-only": {
+    "all": {
+      "mean": 0.515229787,
+      "count": 200
+    },
+    "diff/easy": {
+      "mean": 0.5701756787148594,
+      "count": 83
+    },
+    "diff/hard": {
+      "mean": 0.5579550833333333,
+      "count": 18
+    },
+    "diff/medium": {
+      "mean": 0.4613958037037037,
+      "count": 99
+    },
+    "task/best_response": {
+      "mean": 0.6562753724137932,
+      "count": 87
+    },
+    "task/nash_equilibrium": {
+      "mean": 0.40663716814159295,
+      "count": 113
+    },
+    "model_path": "results/phase2/full_grpo_only/checkpoint-best/model",
+    "n_samples": 200
+  },
+  "Full+Probe GRPO": {
+    "all": {
+      "mean": 0.48396255004761907,
+      "count": 200
+    },
+    "diff/easy": {
+      "mean": 0.5083973012048193,
+      "count": 83
+    },
+    "diff/hard": {
+      "mean": 0.5367083055555555,
+      "count": 18
+    },
+    "diff/medium": {
+      "mean": 0.4538867122174122,
+      "count": 99
+    },
+    "task/best_response": {
+      "mean": 0.6423331747126436,
+      "count": 87
+    },
+    "task/nash_equilibrium": {
+      "mean": 0.36203118415507796,
+      "count": 113
+    },
+    "model_path": "results/phase2/full_probe_grpo/checkpoint-best/model",
+    "n_samples": 200
+  },
+  "SFT (CoT)": {
+    "all": {
+      "mean": 0.9451021401666666,
+      "count": 200
+    },
+    "diff/easy": {
+      "mean": 0.9802326084337349,
+      "count": 83
+    },
+    "diff/hard": {
+      "mean": 0.8665815277777777,
+      "count": 18
+    },
+    "diff/medium": {
+      "mean": 0.929925798316498,
+      "count": 99
+    },
+    "task/best_response": {
+      "mean": 0.9769250517241379,
+      "count": 87
+    },
+    "task/nash_equilibrium": {
+      "mean": 0.920601314454277,
+      "count": 113
+    },
+    "model_path": "results/phase2/sft_cot/checkpoint-best",
+    "n_samples": 200
+  },
+  "SFT \u2192 GRPO": {
+    "all": {
+      "mean": 0.9350840720833333,
+      "count": 200
+    },
+    "diff/easy": {
+      "mean": 0.9801770301204819,
+      "count": 83
+    },
+    "diff/hard": {
+      "mean": 0.8672513194444444,
+      "count": 18
+    },
+    "diff/medium": {
+      "mean": 0.9096120925925923,
+      "count": 99
+    },
+    "task/best_response": {
+      "mean": 0.9770172614942528,
+      "count": 87
+    },
+    "task/nash_equilibrium": {
+      "mean": 0.9027992271386428,
+      "count": 113
+    },
+    "model_path": "results/phase2/sft_then_grpo/checkpoint-best/model",
+    "n_samples": 200
+  }
+}

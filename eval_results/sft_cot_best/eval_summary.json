@@ -1,0 +1,28 @@
+{
+  "all": {
+    "mean": 0.9451021401666666,
+    "count": 200
+  },
+  "diff/easy": {
+    "mean": 0.9802326084337349,
+    "count": 83
+  },
+  "diff/hard": {
+    "mean": 0.8665815277777777,
+    "count": 18
+  },
+  "diff/medium": {
+    "mean": 0.929925798316498,
+    "count": 99
+  },
+  "task/best_response": {
+    "mean": 0.9769250517241379,
+    "count": 87
+  },
+  "task/nash_equilibrium": {
+    "mean": 0.920601314454277,
+    "count": 113
+  },
+  "model_path": "results/phase2/sft_cot/checkpoint-best",
+  "n_samples": 200
+}
