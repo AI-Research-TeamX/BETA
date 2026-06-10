@@ -140,3 +140,5 @@ setup.sh
 Qwen/*
 *.safetensors
 results/phase2
+.agents
+.claude

@@ -173,6 +173,51 @@ def ppo_loss(config: ActorConfig, model_output, data: TensorDict, dp_group=None)
         metrics["kl_loss"] = Metric(value=kl_loss, aggregation=metric_aggregation)
         metrics["kl_coef"] = config.kl_loss_coef
 
+    # Auxiliary probing loss (if enabled via VERL_PROBE_ENABLED=1)
+    from verl.workers.utils.probe_utils import ProbeState, is_probe_enabled
+    import logging as _logging
+    probe = ProbeState.get()
+    if not hasattr(ppo_loss, '_probe_debug_printed'):
+        ppo_loss._probe_debug_printed = True
+        has_extra = "extra_info" in data.keys()
+        _logging.warning(
+            f"[PROBE] ppo_loss: enabled={probe.enabled}, initialized={probe.initialized}, "
+            f"is_probe_enabled={is_probe_enabled()}, "
+            f"has_hidden={probe.hidden_states is not None}, has_extra={has_extra}, "
+            f"data_keys={list(data.keys())[:10]}")
+    if probe.enabled and probe.hidden_states is not None:
+        try:
+            extra_info_raw = data.get("extra_info", None)
+            if extra_info_raw is not None:
+                from verl.utils.tensordict_utils import unwrap_non_tensor_data
+                batch_size = data.shape[0] if hasattr(data, 'shape') else len(extra_info_raw)
+                labels_dict = {}
+                for label_name in ["eq_type", "difficulty", "dominance", "br_direction", "eq_uniqueness"]:
+                    vals = []
+                    for i in range(batch_size):
+                        item = unwrap_non_tensor_data(extra_info_raw[i])
+                        cl = item.get("concept_labels", {}) if isinstance(item, dict) else {}
+                        vals.append(cl.get(label_name, -1))
+                    labels_dict[label_name] = torch.tensor(vals, dtype=torch.long)
+                probe.concept_labels = labels_dict
+
+                prompt_ids = data["prompts"]
+                response_ids = data["responses"]
+                if prompt_ids.is_nested:
+                    prompt_lens_list = prompt_ids.offsets().diff().tolist()
+                    response_lens_list = response_ids.offsets().diff().tolist()
+                    seq_info = list(zip(prompt_lens_list, response_lens_list))
+                else:
+                    seq_info = None
+
+                probe_loss, probe_metrics = probe.compute_probe_loss(seq_info=seq_info)
+                if probe_loss is not None:
+                    policy_loss = policy_loss + probe.probe_lambda * probe_loss
+                    for k, v in probe_metrics.items():
+                        metrics[k] = Metric(value=v, aggregation=AggregationType.MEAN) if isinstance(v, (int, float)) else v
+        except Exception as e:
+            _logging.warning(f"[PROBE] probe loss computation failed: {e}")
+
     return policy_loss, metrics
 
 

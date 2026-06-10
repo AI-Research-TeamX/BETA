@@ -541,6 +541,15 @@ class DataParallelPPOActor(BasePPOActor):
         if self.use_prefix_grouper and "uid" in data.non_tensor_batch.keys():
             non_tensor_select_keys.append("uid")
 
+        # Auxiliary probing loss (enabled via VERL_PROBE_ENABLED=1)
+        from verl.workers.utils.probe_utils import ProbeState, is_probe_enabled
+
+        probe = ProbeState.get()
+        if is_probe_enabled() and not probe.initialized:
+            probe.setup(self.actor_module, self.device_name)
+        if probe.enabled and "extra_info" in data.non_tensor_batch.keys():
+            non_tensor_select_keys.append("extra_info")
+
         data = data.select(batch_keys=select_keys, non_tensor_batch_keys=non_tensor_select_keys)
 
         # Split to make minibatch iterator for updating the actor
@@ -565,6 +574,7 @@ class DataParallelPPOActor(BasePPOActor):
                     micro_batches = mini_batch.split(self.config.ppo_micro_batch_size_per_gpu)
 
                 self.actor_optimizer.zero_grad()
+                probe.zero_grad()
 
                 for micro_batch in micro_batches:
                     micro_batch = micro_batch.to(get_device_id())
@@ -656,6 +666,24 @@ class DataParallelPPOActor(BasePPOActor):
                         metrics["actor/kl_loss"] += kl_loss.detach().item() * loss_scale_factor
                         micro_batch_metrics["actor/kl_coef"] = self.config.kl_loss_coef
 
+                    # Auxiliary probing loss on captured hidden states
+                    if probe.enabled:
+                        from verl.workers.utils.probe_utils import LABEL_SPECS
+
+                        probe_loss, probe_metrics = None, {}
+                        if probe.hidden_states is not None and "extra_info" in model_inputs:
+                            probe_loss, probe_metrics = self._compute_probe_loss(probe, model_inputs)
+                        # keep metric keys identical across ranks/micro-batches
+                        full_probe_metrics = {f"probe/{n}_acc": float("nan") for n in LABEL_SPECS}
+                        full_probe_metrics["probe/total_loss"] = float("nan")
+                        full_probe_metrics["actor/probe_loss"] = float("nan")
+                        full_probe_metrics.update(probe_metrics)
+                        if probe_loss is not None:
+                            policy_loss = policy_loss + probe.probe_lambda * probe_loss
+                            full_probe_metrics["actor/probe_loss"] = probe_loss.detach().item()
+                        micro_batch_metrics.update(full_probe_metrics)
+                        probe.hidden_states = None
+
                     if self.config.use_dynamic_bsz:
                         # relative to the dynamic bsz
                         loss = policy_loss * loss_scale_factor
@@ -670,7 +698,41 @@ class DataParallelPPOActor(BasePPOActor):
                     append_to_dict(metrics, micro_batch_metrics)
 
                 grad_norm = self._optimizer_step()
+                probe.step()
                 mini_batch_metrics = {"actor/grad_norm": grad_norm.detach().item()}
                 append_to_dict(metrics, mini_batch_metrics)
         self.actor_optimizer.zero_grad()
+        probe.zero_grad()
         return metrics
+
+    def _compute_probe_loss(self, probe, model_inputs):
+        """Compute auxiliary probe loss for one micro batch.
+
+        Builds concept labels from extra_info and sample boundaries from the
+        attention mask (valid prompt/response lengths match the packed token
+        order produced by unpad_input when use_remove_padding is on).
+        """
+        import logging
+
+        try:
+            extra_info = model_inputs["extra_info"]
+            labels_dict = {}
+            for label_name in ["eq_type", "difficulty", "dominance", "br_direction", "eq_uniqueness"]:
+                vals = []
+                for item in extra_info:
+                    cl = item.get("concept_labels", {}) if isinstance(item, dict) else {}
+                    vals.append(cl.get(label_name, -1))
+                labels_dict[label_name] = torch.tensor(vals, dtype=torch.long)
+            probe.concept_labels = labels_dict
+
+            attention_mask = model_inputs["attention_mask"]
+            response_length = model_inputs["responses"].size(-1)
+            prompt_part = attention_mask.size(-1) - response_length
+            prompt_lens = attention_mask[:, :prompt_part].sum(dim=-1).tolist()
+            response_lens = attention_mask[:, prompt_part:].sum(dim=-1).tolist()
+            seq_info = list(zip(prompt_lens, response_lens))
+
+            return probe.compute_probe_loss(seq_info=seq_info)
+        except Exception as e:
+            logging.warning(f"[PROBE] probe loss computation failed: {e}")
+            return None, {}

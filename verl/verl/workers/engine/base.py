@@ -122,9 +122,25 @@ class BaseEngine:
         """
         maybe_fix_3d_position_ids(data)
 
+        from verl.workers.utils.probe_utils import ProbeState, is_probe_enabled
+        import logging
+        probe = ProbeState.get()
+        if not probe.initialized:
+            has_module = hasattr(self, 'module')
+            enabled = is_probe_enabled()
+            logging.warning(
+                f"[PROBE] train_batch init check: enabled={enabled}, "
+                f"has_module={has_module}, engine={type(self).__name__}")
+            if has_module and enabled:
+                probe.setup(self.module, get_device_name())
+
         self.optimizer_zero_grad()
+        probe.zero_grad()
+
         outputs = self.forward_backward_batch(data, loss_function, forward_only=False)
         grad_norm = self.optimizer_step()
+        probe.step()
+
         if self.is_mp_src_rank_with_outputs():
             assert "grad_norm" not in outputs["metrics"]
             outputs["metrics"]["grad_norm"] = grad_norm
