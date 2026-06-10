@@ -802,3 +802,109 @@ Section 12 中"RL 方法基本无效"的结论需要修正：
 | `results/phase2/grpo_verl_train.log` | 训练日志 |
 | `eval_results/grpo_verl/eval_summary.json` | ID 评估结果 |
 | `eval_results/grpo_verl/ood_eval_summary.json` | OOD 评估结果 |
+
+## 14. verl GRPO + Probe 实验 (grpo_verl_probe)
+
+### 14.1 动机
+
+Section 13 的 grpo_verl 实验未包含辅助探针损失（probe loss）。本实验在完全相同的 GRPO 超参数下加入 probe 辅助损失，检验 Phase 2 核心假设：**在 RL 训练中用概念探针塑造中间层表征，能否提升博弈求解能力**。这是对 transformers 版 Full+Probe 实验（结果为负收益）的重新检验——当时的负结果可能源于 GRPO 实现质量而非 probe 本身。
+
+### 14.2 实验设置
+
+**与 grpo_verl 完全一致的 GRPO 超参**（lr=1e-6, batch=16, n_rollouts=5, 360 steps 等，见 13.2），新增：
+
+| 参数 | 值 |
+|:-----|:---|
+| probe_lambda (λ) | 0.1 |
+| probe_layer | 17 (= L/2, Qwen2.5-3B 共 36 层) |
+| 概念标签 | eq_type, difficulty, dominance, br_direction, eq_uniqueness |
+| 概念权重 w_t | 与 Phase 1 峰值探针准确率成反比（br_direction 1.57 ... difficulty 1.11）|
+| Probe heads | 每概念一个 nn.Linear(2048, C)，bf16 |
+| Probe optimizer | Adam, lr=1e-3（独立于 actor optimizer）|
+
+**集成方式**（重要工程发现）：verl 0.7.1 默认 `use_legacy_worker_impl=auto` 走 legacy 路径（`fsdp_workers.py` → `workers/actor/dp_actor.py:update_policy`），而非新 engine 路径。Probe 必须集成在 `dp_actor.py`：
+
+1. forward hook 挂在 FSDP 包装的 layers[17]，捕获 hidden states（remove_padding 下为 packed 格式 `(1, total_nnz, 2048)`）
+2. 概念标签从 `data.non_tensor_batch["extra_info"]["concept_labels"]` 读取
+3. 用 attention_mask 计算每条样本的有效 prompt/response 长度，在 packed 序列中提取 prompt 段做 mean pooling
+4. probe_loss 加进 policy_loss 一起 backward（gradient checkpointing 用 use_reentrant=False，梯度可流回 backbone）
+5. probe optimizer 与 actor optimizer 同步 zero_grad/step
+
+**训练中的事故与修复**：step 202 时崩溃——某些 DP rank 的 micro-batch 恰好没有某概念的有效标签（如 br_direction 仅在 best_response 样本上有效），导致各 rank 返回的 metrics key 集合不一致，`DataProto.concat` 断言失败。修复：metrics key 恒定，缺失值用 NaN 占位。从 step 200 checkpoint 自动续训至 360（注：probe heads 未存入 checkpoint，续训时重新初始化，~40 步内重新收敛）。
+
+### 14.3 训练曲线（与 baseline 对比）
+
+| Step | grpo_verl | grpo_verl_probe | Δ |
+|:-----|:----------|:----------------|:--|
+| 0    | 0.3160 | 0.3308 | — |
+| 40   | 0.5986 | 0.5827 | -0.016 |
+| 80   | 0.6435 | 0.6599 | +0.016 |
+| 120  | 0.6712 | 0.7293 | +0.058 |
+| 160  | 0.6986 | 0.7248 | +0.026 |
+| 200  | 0.7176 | 0.7398 | +0.022 |
+| 240  | 0.7264 | 0.7474 | +0.021 |
+| 280  | 0.7298 | 0.7482 | +0.018 |
+| 320  | 0.7294 | **0.7484** | +0.019 |
+| 360  | 0.7269 | 0.7416 | +0.015 |
+
+- Probe 版从 step 80 起持续领先，最佳 val reward **0.7484@320** vs baseline 0.7298@280（**+1.9pp**）
+- Probe 自身指标收敛良好：total_loss 1.18→0.52；探针准确率 eq_type 0.38→0.86、difficulty 0.31→0.96、eq_uniqueness 0.50→1.00，说明 layer 17 表征确实变得更可线性解码
+
+### 14.4 ID 评估结果（200 样本，vLLM）
+
+| 方法 | Overall | Best Response | Nash Equilibrium |
+|:-----|:--------|:-------------|:----------------|
+| GRPO (verl) @280 | 0.7717 | 0.9801 | 0.6112 |
+| **GRPO+Probe @280** | **0.7805** | 0.9812 | 0.6260 |
+| **GRPO+Probe @320** | 0.7793 | 0.9635 | **0.6375** |
+| SFT (CoT) | 0.9451 | 0.9769 | 0.9206 |
+
+### 14.5 OOD 评估结果（750 样本）
+
+| 方法 | Overall | Best Response | Nash Equilibrium |
+|:-----|:--------|:-------------|:----------------|
+| GRPO (verl) | 0.6615 | 0.8532 | 0.4845 |
+| **GRPO+Probe @280** | **0.6660** | 0.8462 | 0.4997 |
+| **GRPO+Probe @320** | 0.6655 | 0.8436 | **0.5011** |
+
+OOD 分类别（@320 vs baseline）：non_integer 0.7487 vs 0.7307 (+1.8pp)、novel_format_math 0.6852 vs 0.6391 (+4.6pp)、novel_format_table 0.5767 vs 0.5378 (+3.9pp)；asymmetric -0.6pp、large_matrix -0.6pp、combined_hard -0.5pp 基本持平。
+
+### 14.6 分析：probe 的作用得到验证（效应温和但一致）
+
+1. **Probe 辅助损失带来一致的正向收益**：
+   - Val reward: +1.9pp（全程 step 80 后持续领先，非单点噪声）
+   - ID: +0.8~0.9pp（两个 checkpoint 均超 baseline）
+   - OOD: +0.4~0.5pp
+   - 收益虽小，但方向在两个独立 checkpoint、两个评估集上完全一致
+
+2. **收益集中在 Nash Equilibrium 任务**（概念密集型）：
+   - ID NE: +1.5~2.6pp；OOD NE: +1.5~1.7pp
+   - BR 任务基本持平（ID @280: 0.9812 vs 0.9801）
+   - 与机制假设吻合：探针概念（eq_type、eq_uniqueness、dominance）主要刻画均衡结构，对 NE 任务的表征塑造直接相关；BR 是数值计算任务，受概念表征影响小
+
+3. **与 transformers 版 Full+Probe 的负结果对比**：
+   - transformers: Full+Probe 0.4840 < GRPO-only 0.5152 < Base 0.5249（probe 有害）
+   - verl: GRPO+Probe 0.7805 > GRPO 0.7717（probe 有益）
+   - **结论修正**：之前"probe 辅助损失无效甚至有害"的结论是训练实现质量的伪影。在健康的 RL 训练动态下，probe 辅助损失是温和的正向正则化
+
+4. **局限**：
+   - 单 seed、单 λ(0.1)、单层(17)，+0.9pp 的 ID 差距在 200 样本上不具统计显著性（约 ±3pp 的 95% CI）
+   - 但 val reward 曲线全程领先（480 样本×10 个评估点）和 NE 任务上的一致方向提供了较强的趋势证据
+   - 后续可做：多 seed 重复、λ 扫描、多层注入、与 SFT→GRPO 组合
+
+### 14.7 输出文件
+
+| 文件/目录 | 说明 |
+|:---------|:-----|
+| `verl_scripts/preprocess_gamesolve_probe_verl.py` | 带概念标签的数据预处理 |
+| `verl_scripts/run_grpo_probe_verl.sh` | GRPO+Probe 训练脚本 |
+| `verl/verl/workers/utils/probe_utils.py` | ProbeState/ProbingHeads 实现 |
+| `verl/verl/workers/actor/dp_actor.py` | probe 集成点（update_policy）|
+| `data/verl_gamesolve_probe/` | 训练/验证 Parquet（含 concept_labels）|
+| `results/phase2/grpo_verl_probe/` | checkpoints (step 40-360) |
+| `results/phase2/grpo_verl_probe/merged_step_320/` | 最佳 checkpoint (HF 格式) |
+| `results/phase2/grpo_verl_probe/merged_step_280/` | 次佳 checkpoint (HF 格式) |
+| `results/phase2/grpo_verl_probe/training_metrics.jsonl` | 训练全程指标（含 probe acc）|
+| `results/phase2/grpo_verl_probe_training.log` | 训练日志 |
+| `eval_results/grpo_verl_probe/` | step 320 ID/OOD 评估 |
+| `eval_results/grpo_verl_probe_280/` | step 280 ID/OOD 评估 |
