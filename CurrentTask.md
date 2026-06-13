@@ -15,3 +15,7 @@
 现在正在进行 /root/storage/cuisijia.csj/vlmarch/BETA/proposal.md 的实验，目前看结果不符合预期。请想一些其他可以发顶会（如：ICML, ICLR, NeurIPS）的research idea，充分深度调研，deep research，将所有的调研和idea记录在 /root/storage/cuisijia.csj/vlmarch/BETA/ideas 文件夹中。
 
 /auto-research 测试 原始模型,SFT,GRPO(verl),GRPO(verl)+Probe 的checkpoints在GTBench, TextArena benchmark上的表现（不需要测试TextArena中所有的，挑选一些）。全面测试、分析结果，评测代码、脚本、结果分析完成在 ./benchmark_eval 文件夹下。遇到报错自主解决。
+
+/auto-research 跑关键层消融加多seed实验，实验过程和结果记录在 training.md 中。充分利用8卡资源，遇到报错自主分析解决。
+
+整理当前项目，将项目中的目录介绍、代码和脚本文件介绍、研究过程、实验结果、实验分析，整理成一个 `README.md` 文件，以便我理解和汇报整个项目。
