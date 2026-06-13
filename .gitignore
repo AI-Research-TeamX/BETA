@@ -142,3 +142,7 @@ Qwen/*
 results/phase2
 .agents
 .claude
+
+# benchmark_eval: embedded benchmark clones & raw results stay local
+benchmark_eval/GTBench/
+benchmark_eval/TextArena/

@@ -13,3 +13,5 @@
 /auto-research 这个grpo_verl 是不是没有考虑probe，对 grpo_verl + probe 进行实验，保存并评估checkpoints，分析实验结果。验证probe的作用。充分利用8卡资源，遇到报错自主分析解决。
 
 现在正在进行 /root/storage/cuisijia.csj/vlmarch/BETA/proposal.md 的实验，目前看结果不符合预期。请想一些其他可以发顶会（如：ICML, ICLR, NeurIPS）的research idea，充分深度调研，deep research，将所有的调研和idea记录在 /root/storage/cuisijia.csj/vlmarch/BETA/ideas 文件夹中。
+
+/auto-research 测试 原始模型,SFT,GRPO(verl),GRPO(verl)+Probe 的checkpoints在GTBench, TextArena benchmark上的表现（不需要测试TextArena中所有的，挑选一些）。全面测试、分析结果，评测代码、脚本、结果分析完成在 ./benchmark_eval 文件夹下。遇到报错自主解决。

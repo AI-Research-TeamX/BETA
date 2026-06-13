@@ -1,0 +1,6 @@
+llm_model_path: local/none
+max_tokens: 1
+timeout: 10
+temperature: 0.0
+model_type: LLMModel
+nick_name: random-opponent

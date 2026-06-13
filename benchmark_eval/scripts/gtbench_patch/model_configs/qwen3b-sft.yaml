@@ -1,0 +1,6 @@
+llm_model_path: local/qwen3b-sft
+max_tokens: 1024
+timeout: 120
+temperature: 0.2
+model_type: LLMModel
+nick_name: qwen3b-sft
