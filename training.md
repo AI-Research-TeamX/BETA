@@ -908,3 +908,71 @@ OOD 分类别（@320 vs baseline）：non_integer 0.7487 vs 0.7307 (+1.8pp)、no
 | `results/phase2/grpo_verl_probe_training.log` | 训练日志 |
 | `eval_results/grpo_verl_probe/` | step 320 ID/OOD 评估 |
 | `eval_results/grpo_verl_probe_280/` | step 280 ID/OOD 评估 |
+
+## 15. 外部博弈 Benchmark 迁移评估 (GTBench & TextArena)
+
+### 15.1 动机
+
+前述所有评估都在 GameSolve-Bench（normal-form 矩阵博弈）上进行，属于训练同任务族。为检验四个 checkpoint 学到的能力能否**迁移到结构不同的 sequential / interactive 博弈**（结构泛化），在两个外部基准上评测 Base、SFT (CoT)、GRPO (verl)、GRPO+Probe (verl)。这也是对 proposal §2.5 中"Generalization"一栏的落实。
+
+### 15.2 实验设置
+
+| Benchmark | 引擎 | 对局形式 | 选用游戏 |
+|:----------|:-----|:---------|:---------|
+| **GTBench** | openspiel / rlcard | 候选模型 (prompt_agent) vs **随机对手**，20 场有效/格，前后手各半 | breakthrough, connect4, first_sealed_auction, kuhn_poker, liars_dice, negotiation, nim, pig, prisoners_dilemma, tictactoe（10 个）|
+| **TextArena** | textarena 0.7.3 | 候选模型 vs **固定 Base 对手**，20 集/格，前后手交替 | TicTacToe, ConnectFour, Nim, KuhnPoker, IteratedPrisonersDilemma, SimpleNegotiation（6 个）|
+
+- 4 个 3B 模型由 4 个 vLLM 服务器（GPU 0-3）并行供给；GTBench 4 模型 × 8 worker 并行，TextArena 24 任务并行
+- GTBench 原 langchain 后端重写为 OpenAI client 直连本地 vLLM（`benchmark_eval/GTBench/gamingbench/chat/chat.py`）
+- 指标统一为 score = (win + 0.5·draw)/n；GTBench 因候选非法动作判 Abnormal 的对局不计入
+- 评测代码/脚本/结果在 `benchmark_eval/`（`ANALYSIS.md`、`results/REPORT.md`、`results/summary.json`）
+
+### 15.3 结果
+
+**GTBench avg score**（对随机对手，8 个所有模型 n≥10 的游戏；nim/pig 因完成率不足排除）:
+
+| 方法 | avg score | 完成率 |
+|:-----|:----------|:-------|
+| Base (Qwen2.5-3B) | 0.524 | 80% |
+| **SFT (CoT)** | **0.604** | 83% |
+| GRPO (verl) | 0.559 | 79% |
+| GRPO+Probe (verl) | 0.574 | 79% |
+
+**TextArena avg score**（对固定 Base 对手；Base vs Base = 0.521 为 ~50% 对照，验证通过）:
+
+| 方法 | avg score |
+|:-----|:----------|
+| Base (Qwen2.5-3B) | 0.521 |
+| SFT (CoT) | **0.382** |
+| **GRPO (verl)** | **0.558** |
+| GRPO+Probe (verl) | 0.483 |
+
+### 15.4 关键结论
+
+1. **SFT 在交互式博弈上显著退化，与其同分布优势形成鲜明对比**。SFT 在 GameSolve-Bench（ID 0.945）和 GTBench 对随机对手（0.604，靠格式遵循好）上最强，但在 TextArena 对 Base 对手时**跌至 0.382**（KuhnPoker 0.20、TicTacToe 0.35），明显低于 Base。SFT 过拟合了 GameSolve 的 CoT 答题格式，在需要多轮交互、对手建模的场景中受损。**这把"SFT 同分布最强、分布外脆弱"的结论从 OOD 矩阵博弈（§12）进一步外推到了结构性分布外。**
+
+2. **RL 方法（GRPO / GRPO+Probe）迁移安全，无能力回退**。两者在 GTBench（0.56/0.57）和 TextArena（0.56/0.48）上均与 Base（0.52/0.52）持平或略升。GameSolve 上 +25pp 的提升（0.77 vs 0.52）没有以牺牲通用博弈能力为代价——**RL 微调的"对齐税"远低于 SFT**。这与 §12 OOD 结论一致：RL 的优势在泛化稳健性。
+
+3. **Probe 在外部 benchmark 上与 GRPO 无一致差异**（GTBench 略高 +1.4pp、TextArena 略低 -7.5pp，主要差在 Nim/TicTacToe）。这符合预期：probe 概念（均衡类型、支配策略、均衡唯一性）是 normal-form 矩阵博弈特定的，不应迁移到 sequential 游戏。**§14 中验证的 probe 正向作用是 GameSolve 任务内的，不构成结构泛化收益。**
+
+4. **格式遵循是 3B 模型在 GTBench 的主要瓶颈**（附带发现）。pig 游戏（动作仅 `<roll>`/`<stop>`）中 Base/GRPO/Probe 几乎全部输出字面 `<Action>` 等非法动作被判 Abnormal（完成率 1-3%），而 SFT 达 77%——SFT 唯一确凿的迁移收益是指令格式遵循。
+
+### 15.5 对 proposal 的含义
+
+- 结构泛化（matrix → sequential）有限，且这是预期内的：probe 概念与 GameSolve 任务族绑定。若要外部 benchmark 收益，需在训练中混入 sequential 博弈，或把概念标签泛化（如"是否存在占优行动"在 sequential 游戏中重新定义）。
+- RL（verl GRPO ± probe）是更安全的能力增强路径：同分布大幅提升、分布外无回退；SFT 的同分布优势以分布外退化为代价。
+- 后续若做 benchmark 提升实验，优先考虑 TextArena 自我对弈 RL（SPIRAL 式）或 GTBench 游戏混训。
+
+### 15.6 输出文件
+
+| 文件/目录 | 说明 |
+|:---------|:-----|
+| `benchmark_eval/ANALYSIS.md` | 完整分析（发现、统计注意事项、结论）|
+| `benchmark_eval/results/REPORT.md` | 分游戏数据表 |
+| `benchmark_eval/results/summary.json` | 结构化汇总 |
+| `benchmark_eval/scripts/serve_models.sh` | 启动 4 个 vLLM 服务器 |
+| `benchmark_eval/scripts/run_gtbench.sh` | GTBench 评测脚本 |
+| `benchmark_eval/scripts/textarena_eval.py` | TextArena 评测脚本 |
+| `benchmark_eval/scripts/analyze_results.py` | 结果汇总脚本 |
+| `benchmark_eval/scripts/gtbench_patch/` | GTBench 修改存档（chat.py + 模型配置）|
+| `benchmark_eval/results/gtbench/`, `textarena/` | 原始对局记录（本地保留）|
