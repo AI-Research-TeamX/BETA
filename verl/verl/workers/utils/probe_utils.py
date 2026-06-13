@@ -137,6 +137,9 @@ class ProbeState:
             hidden_size = 2048
             logger.warning(f"[PROBE] Could not find hidden_size, defaulting to {hidden_size}")
 
+        # seed probe-head init for reproducible multi-seed experiments
+        probe_seed = int(os.environ.get("VERL_PROBE_SEED", "0"))
+        torch.manual_seed(probe_seed)
         self.probing_heads = ProbingHeads(hidden_size).to(device).to(torch.bfloat16)
         self.probe_optimizer = torch.optim.Adam(
             self.probing_heads.parameters(), lr=1e-3

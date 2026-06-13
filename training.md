@@ -976,3 +976,64 @@ OOD 分类别（@320 vs baseline）：non_integer 0.7487 vs 0.7307 (+1.8pp)、no
 | `benchmark_eval/scripts/analyze_results.py` | 结果汇总脚本 |
 | `benchmark_eval/scripts/gtbench_patch/` | GTBench 修改存档（chat.py + 模型配置）|
 | `benchmark_eval/results/gtbench/`, `textarena/` | 原始对局记录（本地保留）|
+
+## 16. 关键层消融 + 多 seed 实验(probe 作用的严格检验)
+
+### 16.1 动机
+
+§14 报告 GRPO+Probe 比 GRPO baseline 高 +1.9pp(val reward),但那是**单 seed、单次 360 步**的对比,且本人在 §14.6 已注明"单 seed,200 样本上不具统计显著性"。要判定 probe 辅助损失到底有没有用、以及 proposal 的核心假设(**在 Phase 1 定位的关键层注入 probe 损失更有效**)是否成立,需要:
+1. **多 seed**:量化 run-to-run 噪声,看 +1.9pp 是真实效应还是噪声。
+2. **关键层消融**:对比在不同层注入 probe 损失的下游收益。Phase 1 显示概念在**中间层(mean-pooling 峰值层中位数 20,主要集中在 16–22)** 最可线性解码;假设成立的话,中间层(17)注入应优于早/晚/末层。
+
+### 16.2 实验设置
+
+- **5 个条件** × **3 seeds** = 15 次独立训练:
+  - `no_probe`(纯 GRPO)
+  - `probe@6`(早层,非关键)、`probe@17`(中层 = L/2,**关键层**)、`probe@30`(晚层)、`probe@35`(末层)
+- 其余超参与 §14 完全一致(λ=0.1,lr=1e-6,batch=16,n=5,温度 0.7)。每次训练 **240 步(2 epoch)**——§14 的 val 曲线在 ~160 步即平台,240 步足够捕捉峰值且省 33% 时间。
+- seed 控制:`data.seed`(数据顺序)+ `VERL_PROBE_SEED`(probe head 初始化)。
+- **指标**:训练中 verl 在 480 样本验证集上每 40 步记录的 `val-aux/gamesolve/reward/mean@1`,取每次 run 的峰值。该指标比 200 样本 ID eval 样本更多、跨 run 完全一致、且无需额外推理(免费)。
+- **算力**:8×H20 拆成 2 个 slot(GPU 0-3 / 4-7),每次 run 用 4 卡 FSDP+vLLM,2 路并行(独立 Ray 实例,`_temp_dir` 隔离)。15 次 run 约 3.7 小时。脚本:`verl_scripts/run_probe_ablation.sh`、`orchestrate_ablation.sh`、`analyze_ablation.py`。
+
+### 16.3 结果
+
+**每条件峰值 val reward(3 seeds,mean ± std):**
+
+| 条件 | 注入层 | peak val reward | vs no_probe |
+|:-----|:-------|:----------------|:------------|
+| probe@6 | 早(6) | **0.7280 ± 0.0084** | +0.53pp |
+| **no_probe** | — | **0.7227 ± 0.0059** | — |
+| probe@17 | 中/关键(17) | 0.7133 ± 0.0118 | **−0.94pp** |
+| probe@30 | 晚(30) | 0.7025 ± 0.0043 | −2.02pp |
+| probe@35 | 末(35) | 0.6853 ± 0.0073 | −3.74pp |
+
+各 run 峰值明细(seed0/1/2):no_probe 0.728/0.716/0.724;probe@6 0.725/0.722/0.738;probe@17 0.723/0.717/0.700;probe@30 0.706/0.698/0.704;probe@35 0.690/0.677/0.689。
+
+### 16.4 两个结论(均为否定)
+
+**结论 1:probe 辅助损失在关键层(17)并不优于 no_probe。**
+- probe@17 vs no_probe:**Δ = −0.94pp,Welch t = −1.23(df≈2.9),不显著**,且符号为负。
+- **§14 的 +1.9pp 是 seed 噪声**:§14 恰好用了一个较好的 probe run(0.748)对比一个较弱的 baseline。多 seed 下 probe@17 均值(0.713)反而略低于 no_probe(0.723)。
+
+**结论 2:关键层假设被推翻——注入层越晚,损害越大;中间"关键层"并非最优。**
+- 层消融呈现**干净的单调趋势**:`早(6) 0.728 ≈ no_probe 0.723 > 中(17) 0.713 > 晚(30) 0.703 > 末(35) 0.685`。
+- probe@17 − probe@6 = **−1.5pp**(关键层反而不如早层),probe@17 − probe@35 = +2.8pp。
+- 各条件组内 std 仅 0.004–0.012,而 probe@6 与 probe@35 相差 **4.3pp**,远超噪声 → 趋势稳健。
+- **机制解释**:辅助 CE 损失对生成是一个**与深度相关的干扰项**,而非集中在概念可解码层的增益。越靠近 LM head(末层),其特征越与生成直接相关,probe 损失对其的扰动越伤害生成质量;早层注入则几乎无害(≈ no_probe)。Phase 1 发现"概念在中间层可线性解码"**并未转化为**在该层注入 probe 损失的下游收益。
+
+### 16.5 对研究方向的含义(诚实评估)
+
+- proposal 的 Phase 2 核心假设(**可解释性引导的辅助训练 = 在关键层注入概念探针损失能提升博弈求解**)在本设置下**不成立**:probe 损失整体是中性偏有害的正则项,且"关键层"并无特殊优势。
+- 这关闭了"probing-guided enhancement 有正收益"作为正面方法论文的卖点。但**干净的单调层-损害曲线**本身是一个有信息量的(负面)发现:它说明辅助探针损失与生成目标的干扰程度由注入深度主导,而非由概念可解码性主导。
+- 资产仍在:GameSolve-Bench、Phase 1 探针定位分析、verl GRPO 训练管线、以及 RL-vs-SFT 泛化结论(§12/§15)。建议据此转向 `ideas/` 中的其他方向(self-play RL、game-theoretic PRM 等),而非在 probe 增益上继续投入。
+
+### 16.6 输出文件
+
+| 文件/目录 | 说明 |
+|:---------|:-----|
+| `verl_scripts/run_probe_ablation.sh` | 参数化训练(SEED/PROBE_LAYER/GPU 等)|
+| `verl_scripts/orchestrate_ablation.sh` | 2-slot 并行编排器(4 卡/run)|
+| `verl_scripts/analyze_ablation.py` | 汇总 + 显著性 + 层消融分析 |
+| `results/phase2/ablation_summary.json` | 结构化结果 |
+| `results/phase2/ablation_trajectories/*.jsonl` | 15 次 run 的完整 val 轨迹 |
+| `results/phase2/ablation_logs/` | 训练日志 |
