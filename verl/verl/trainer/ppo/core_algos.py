@@ -331,6 +331,105 @@ def compute_grpo_outcome_advantage(
     return scores, scores
 
 
+def _nash_minimax_mixture(M: np.ndarray, iters: int = 200, eta: float = 1.0) -> np.ndarray:
+    """Maximin (Nash) mixed strategy of a symmetric zero-sum tournament with
+    antisymmetric payoff matrix M (M = -M.T). Solved by Hedge/multiplicative-weights
+    self-play; the time-average of iterates converges to the Nash equilibrium.
+    Returns a probability vector p* of length K.
+    """
+    K = M.shape[0]
+    if K == 1:
+        return np.ones(1)
+    p = np.ones(K) / K
+    pbar = np.zeros(K)
+    for _ in range(iters):
+        payoff = M @ p            # expected payoff of each pure strategy vs current p
+        p = p * np.exp(eta * payoff)
+        s = p.sum()
+        p = p / s if s > 0 else np.ones(K) / K
+        pbar += p
+    pbar /= iters
+    sb = pbar.sum()
+    return pbar / sb if sb > 0 else np.ones(K) / K
+
+
+def _group_advantage_from_scores(scores, index, kind, beta, norm):
+    """Compute per-response advantages grouped by index using a Nash-tournament
+    baseline ('nash') or a rank baseline ('rank'). Returns a 1-D tensor."""
+    id2idx = defaultdict(list)
+    for i in range(len(scores)):
+        id2idx[index[i]].append(i)
+    adv = torch.zeros(len(scores), dtype=torch.float32)
+    for _id, idxs in id2idx.items():
+        r = np.array([float(scores[i]) for i in idxs])
+        K = len(idxs)
+        if K == 1:
+            continue
+        if kind == "nash":
+            # soft pairwise preference P[i,j] = sigmoid(beta*(r_i - r_j)); M = P - 0.5
+            diff = r[:, None] - r[None, :]
+            P = 1.0 / (1.0 + np.exp(-beta * diff))
+            M = P - 0.5
+            np.fill_diagonal(M, 0.0)
+            p = _nash_minimax_mixture(M)
+            a = p - 1.0 / K                     # deviation from uniform; sums to 0
+        elif kind == "rank":
+            order = np.argsort(np.argsort(r))   # ranks 0..K-1
+            a = order / (K - 1) - 0.5           # normalized rank, mean ~0
+            a = a - a.mean()
+        else:
+            raise ValueError(kind)
+        if norm:
+            sd = a.std()
+            a = a / (sd + 1e-6)
+        for j, i in enumerate(idxs):
+            adv[i] = float(a[j])
+    return adv
+
+
+@register_adv_est("nash_grpo")
+def compute_nash_grpo_advantage(
+    token_level_rewards: torch.Tensor,
+    response_mask: torch.Tensor,
+    index: np.ndarray,
+    epsilon: float = 1e-6,
+    norm_adv_by_std_in_grpo: bool = True,
+    config: Optional[AlgoConfig] = None,
+    **kwargs,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Nash-GRPO: replace GRPO's group-mean baseline with the Nash equilibrium of
+    a pairwise-preference tournament over the group's responses. Advantage of
+    response i = p*[i] - 1/K (Nash deviation from uniform), std-normalized to match
+    GRPO's scale. Preference temperature via env NASH_BETA (default 4.0)."""
+    import os
+    beta = float(os.environ.get("NASH_BETA", "4.0"))
+    scores = token_level_rewards.sum(dim=-1)
+    with torch.no_grad():
+        adv = _group_advantage_from_scores(scores, index, "nash", beta, norm_adv_by_std_in_grpo)
+        adv = adv.to(token_level_rewards.device).unsqueeze(-1) * response_mask
+    return adv, adv
+
+
+@register_adv_est("rank_grpo")
+def compute_rank_grpo_advantage(
+    token_level_rewards: torch.Tensor,
+    response_mask: torch.Tensor,
+    index: np.ndarray,
+    epsilon: float = 1e-6,
+    norm_adv_by_std_in_grpo: bool = True,
+    config: Optional[AlgoConfig] = None,
+    **kwargs,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Mechanism ablation: rank baseline (normalized within-group rank, std-normalized).
+    Isolates whether any Nash benefit is just a monotone rank transform vs. the
+    game-theoretic tournament structure."""
+    scores = token_level_rewards.sum(dim=-1)
+    with torch.no_grad():
+        adv = _group_advantage_from_scores(scores, index, "rank", 0.0, norm_adv_by_std_in_grpo)
+        adv = adv.to(token_level_rewards.device).unsqueeze(-1) * response_mask
+    return adv, adv
+
+
 @register_adv_est(AdvantageEstimator.GRPO_VECTORIZED)
 def compute_grpo_vectorized_outcome_advantage(
     token_level_rewards: torch.Tensor,
