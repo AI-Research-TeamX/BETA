@@ -201,6 +201,22 @@ most likely to move — a free strengthener for the running experiment.
 **Two-paper arc:** Ideas 7 + 9 together form a "science of strategic post-training"
 story (generalization anatomy + depth anatomy); Idea 8 is the standalone method win.
 
+### Idea 10: Long-Horizon LLM Games — research problems & ideas
+
+**File:** [long_horizon_llm_games.md](long_horizon_llm_games.md)
+
+**One-liner:** GameSolve-Bench is single-shot; the project's headline gap lives in
+*sequential/interactive* play. Extend to extensive-form / repeated games (where the
+long-horizon optimum is *formally computable* — SPE, folk-theorem regions) and study
+five problems: temporal credit assignment, backward-induction depth, equilibrium
+selection under repetition, opponent adaptation, and memory-as-bottleneck.
+
+**Why strong:** directly explains the SFT-collapse-on-interactive-games finding as a
+*horizon/credit-assignment cliff*; every result is gradable against formal ground
+truth at each horizon. Flagship sub-idea **10a** ("does outcome-RL learn non-myopic
+play, and where's the horizon cliff?") is a safe analysis spine; **10b** tests
+potential-based *temporal* shaping (provably un-hackable, unlike the refuted GT-PRM).
+
 ---
 
 ## Recommended Strategy (revised June 2026, post-refutations)
