@@ -1,3 +1,7 @@
+# Loop Engineering is All You Need
+
+<img width="1569" height="364" alt="image" src="https://github.com/user-attachments/assets/0158264d-f2a1-4bd7-8100-2848c1a434a0" />
+
 # Probing & Enhancing Game-Theoretic Reasoning in LLMs
 
 > 用线性探针**诊断**、再用辅助探针损失 / RL **增强** LLM 的博弈论推理能力。
